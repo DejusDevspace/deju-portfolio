@@ -1,11 +1,14 @@
 import React, { useState } from "react";
-import NavMain from "./components/navBar/NavMain";
+import { NavMain, HeroMain } from "./components";
 
 function App() {
   return (
-    <div className="flex flex-col">
+    <>
       <NavMain />
-    </div>
+      <div className="flex flex-col justify-center items-center min-h-screen">
+        <HeroMain />
+      </div>
+    </>
   );
 }
 
