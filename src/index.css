@@ -1,0 +1,48 @@
+@import url("https://fonts.googleapis.com/css2?family=Emblema+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap");
+@import "tailwindcss";
+
+@theme {
+  /* Fonts */
+  --font-primary: "JetBrains Mono", monospace;
+  --font-serif: "Montserrat", sans-serif;
+  --font-embela-cursive: "Emblema One", cursive;
+  --font-roboto: "Roboto", sans-serif;
+  --font-special: "Space Grotesk", sans-serif;
+
+  /* Colors */
+  --color-primary: white; /* Deep background black (main site background) */
+  --color-secondary: #1e1e1e; /* Secondary surface (cards/sections) */
+  --color-accent: #00ffff; /* Neon Blue (used for accents, buttons, etc.) */
+  --color-neonBlue: #00ffff; /* Same as accent for consistency */
+  --color-neonPurple: #9f00ff; /* Strong neon purple */
+  --color-neonMagenta: #ff00ff; /* Magenta glow elements or highlights */
+
+  /* Neon Shadow for glow effects */
+  --shadow-neon: 0 0 10px #00ffff, 0 0 20px #00ffff, 0 0 30px #00ffff;
+}
+
+@layer base {
+  body {
+    margin: 0;
+    padding: 0;
+    color: var(--color-primary);
+    font-family: var(--font-primary);
+    background-color: black;
+  }
+
+  h1 {
+    @apply text-[48px] xl:text-[60px] leading-[1.1] font-semibold;
+  }
+
+  h2 {
+    @apply text-[36px] xl:text-[48px] leading-[1.1] font-semibold;
+  }
+
+  h3 {
+    @apply text-[20px] xl:text-[24px] leading-[1.1] font-semibold;
+  }
+}
