@@ -5,7 +5,7 @@ function App() {
   return (
     <div className="flex flex-col min-h-screen">
       <NavMain />
-      <main className="flex-grow flex flex-col justify-center items-center">
+      <main className="flex-grow flex flex-col justify-center items-center bg-secondary">
         <HeroMain />
         <AboutMain />
       </main>
