@@ -1,4 +1,5 @@
 import React from "react";
+import SectionHeading from "../common/SectionHeading";
 import { FiDownload } from "react-icons/fi";
 
 function HeroMain() {
@@ -10,8 +11,8 @@ function HeroMain() {
       <div className="absolute inset-0 bg-black/80 bg-opacity-50"></div>
       {/* Overlay */}
       <div className="relative z-5 flex flex-col text-center items-center justify-center text-white">
-        <h1 className="text-5xl font-bold leading-tight">Hi, I'm Deju</h1>
-        <p className="text-lg">
+        <SectionHeading text="Hi, I'm Deju" />
+        <p className="text-md xl:text-lg mt-4">
           Full Stack Data Scientist | Generative AI | MLOps | Backend Developer{" "}
         </p>
         <div className="flex flex-col xl:flex-row items-center gap-8 mt-4">
