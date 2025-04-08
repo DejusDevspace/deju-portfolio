@@ -10,7 +10,7 @@ function AboutMain() {
           <SectionHeading text="About">
             <span className="text-accent">Me</span>
           </SectionHeading>
-          <p className="max-w-[500px] xl:max-w-[800px]">
+          <p className="max-w-[500px] xl:max-w-[800px] uppercase text-primary/60">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur
             officia exercitationem, quos facere veritatis, quo rem cumque
             molestias, delectus nobis aut deleniti cum? Minus nam minima commodi
