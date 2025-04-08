@@ -5,7 +5,7 @@ import AboutContent from "./AboutContent";
 
 function AboutMain() {
   return (
-    <div className="container mx-auto min-h-screen my-8 xl:my-12">
+    <div className="container mx-auto my-12 xl:my-16">
       <div className="flex flex-col items-center justify-center text-center px-6 xl:px-0">
         <div className="flex flex-col gap-8 mb-8">
           <SectionHeading text="About">
