@@ -1,6 +1,6 @@
 import React from "react";
 import SectionHeading from "../common/SectionHeading";
-import { FiDownload } from "react-icons/fi";
+import DownloadCVButton from "../common/DownloadCVButton";
 
 function HeroMain() {
   return (
@@ -15,18 +15,7 @@ function HeroMain() {
         <p className="text-md xl:text-lg mt-4">
           Full Stack Data Scientist | Generative AI | MLOps | Backend Developer{" "}
         </p>
-        <div className="flex flex-col xl:flex-row items-center gap-8 mt-4">
-          {/* Download CV Button */}
-          <a
-            href="/Deju_Adejo_CV.pdf"
-            download
-            className="flex items-center gap-2 bg-black text-cyan-400 px-6 py-3 rounded-lg cursor-pointer 
-            shadow-[0_0_15px_#00FFFF] hover:shadow-[0_0_25px_#9F00FF] transition-all duration-300"
-          >
-            <span>Download CV</span>
-            <FiDownload className="text-xl" />
-          </a>
-
+        <DownloadCVButton>
           {/* Hire Me Button */}
           <a
             href="https://www.linkedin.com/in/deju-adejo/"
@@ -38,7 +27,7 @@ function HeroMain() {
           >
             Hire Me
           </a>
-        </div>
+        </DownloadCVButton>
       </div>
     </section>
   );
