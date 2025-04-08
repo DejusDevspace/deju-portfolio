@@ -1,6 +1,7 @@
 import React from "react";
 import SectionHeading from "../common/SectionHeading";
 import AboutImage from "./AboutImage";
+import AboutContent from "./AboutContent";
 
 function AboutMain() {
   return (
@@ -17,9 +18,9 @@ function AboutMain() {
             doloremque fuga expedita.
           </p>
         </div>
-        <div className="flex flex-col gap-8 justify-center items-center xl:flex-row w-full xl:justify-around py-8">
+        <div className="flex flex-col gap-8 justify-center xl:flex-row w-full py-8">
           <AboutImage />
-          <div>Content</div>
+          <AboutContent />
         </div>
       </div>
     </div>
