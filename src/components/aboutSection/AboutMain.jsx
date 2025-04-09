@@ -5,8 +5,14 @@ import AboutContent from "./AboutContent";
 
 function AboutMain() {
   return (
-    <div className="container mx-auto my-12 xl:my-16">
-      <div className="flex flex-col items-center justify-center text-center px-6 xl:px-0">
+    <div className="relative container mx-auto my-12 xl:my-16">
+      {/* Glow Background */}
+      <div className="absolute -z-10 inset-0 h-full w-full">
+        <div className="hidden xl:block absolute top-[-20%] left-[-40%] h-[800px] w-[800px] rounded-full bg-[radial-gradient(circle_400px_at_center,#fbfbfb36,transparent)] animate-pulse" />
+        <div className="hidden xl:block absolute bottom-[-20%] right-[-40%] h-[800px] w-[800px] rounded-full bg-[radial-gradient(circle_400px_at_center,#fbfbfb36,transparent)] animate-pulse" />
+      </div>
+
+      <div className="flex flex-col items-center justify-center text-center px-6 xl:px-0 relative">
         <div className="flex flex-col gap-8 mb-8">
           <SectionHeading text="About">
             <span className="text-accent">Me</span>
