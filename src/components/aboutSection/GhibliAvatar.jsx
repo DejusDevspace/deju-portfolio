@@ -4,7 +4,15 @@ import avatarImg from "../../assets/ghibli-avatar-removebg-preview.png";
 
 const GhibliAvatar = () => {
   return (
-    <div className="w-full max-w-[600px] h-[500px] xl:max-w-[400px] xl:h-[600px] shadow-xl">
+    <motion.div
+      initial={{
+        opacity: 0.7,
+      }}
+      whileHover={{
+        opacity: 1,
+      }}
+      className="w-full max-w-[600px] h-[500px] xl:max-w-[400px] xl:h-[600px] shadow-xl"
+    >
       <motion.img
         src={avatarImg}
         alt="Ghibli Avatar"
@@ -23,7 +31,7 @@ const GhibliAvatar = () => {
           transformStyle: "preserve-3d",
         }}
       />
-    </div>
+    </motion.div>
   );
 };
 
