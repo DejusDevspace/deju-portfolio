@@ -1,6 +1,6 @@
 import React from "react";
 import SectionHeading from "../common/SectionHeading";
-import AboutImage from "./AboutImage";
+import GhibliAvatar from "./GhibliAvatar";
 import AboutContent from "./AboutContent";
 
 function AboutMain() {
@@ -19,7 +19,7 @@ function AboutMain() {
           </p>
         </div>
         <div className="flex flex-col gap-8 justify-center xl:flex-row w-full py-8">
-          <AboutImage />
+          <GhibliAvatar />
           <AboutContent />
         </div>
       </div>
