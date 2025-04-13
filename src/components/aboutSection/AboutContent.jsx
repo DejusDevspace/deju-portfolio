@@ -1,13 +1,19 @@
-import React from "react";
-import DownloadCVButton from "../common/DownloadCVButton";
+import React, { useState } from "react";
+import BioContent from "./BioContent";
+import ExperienceContent from "./ExperienceContent";
+import EducationContent from "./EducationContent";
 
 function AboutContent() {
-  const personalInfo = [
-    { name: "Name", value: "Ojomideju Adejo" },
-    { name: "Address", value: "Abuja, Nigeria" },
-    { name: "Phone Number", value: "+234 701 603 5694" },
-    { name: "Email", value: "ojomideju2003@gmail.com" },
-    { name: "Website", value: "dejuadejo.vercel.app" },
+  const [active, setIsActive] = useState(0);
+
+  function setActive(id) {
+    setIsActive(id);
+  }
+
+  const data = [
+    { tag: "Bio", content: BioContent },
+    { tag: "Education", content: EducationContent },
+    { tag: "Experience", content: ExperienceContent },
   ];
 
   return (
@@ -21,18 +27,29 @@ function AboutContent() {
         maiores quibusdam neque qui, molestias suscipit eum iusto quo laboriosam
         odit eius delectus dolore explicabo!
       </div>
-      <div className="flex flex-col">
-        {personalInfo.map((info, index) => {
+      <div className="flex gap-4">
+        {data.map((dataItem, index) => {
           return (
-            <div key={index} className="flex my-4">
-              <span className="text-accent">{info.name}:</span>
-              <span className="mx-2 text-primary/80">{info.value}</span>
-            </div>
+            <span
+              key={index}
+              className={`${
+                index === active
+                  ? "text-accent border-b-2 border-accent"
+                  : "text-accent/40"
+              } cursor-pointer hover:text-accent/60 transition-all duration-300`}
+              onClick={() => setActive(index)}
+            >
+              {dataItem.tag}
+            </span>
           );
         })}
-        <div className="flex items-start">
-          <DownloadCVButton />
-        </div>
+      </div>
+      <div>
+        {data.map((dataItem, index) => {
+          return (
+            <div key={index}>{index === active && <dataItem.content />}</div>
+          );
+        })}
       </div>
     </div>
   );
