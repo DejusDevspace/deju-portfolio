@@ -16,7 +16,7 @@ const projects = [
       { name: "Framer Motion" },
     ],
     links: { live: "#", github: "#" },
-    image: "../../assets/profImg.jpeg",
+    image: "#",
   },
   {
     id: 1,
