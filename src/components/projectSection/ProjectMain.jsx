@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import SectionHeading from "../common/SectionHeading";
 import { projects } from "./sectionData";
 import ProjectItem from "./ProjectItem";
 import { motion } from "framer-motion";
@@ -23,8 +24,14 @@ function ProjectMain() {
         initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, ease: "easeOut" }}
-        viewport={{ once: false, amount: 0.2 }}
+        viewport={{ once: true, amount: 0.2 }}
       >
+        <div className="flex justify-center">
+          <SectionHeading text="My">
+            <span className="text-accent">Projects</span>
+          </SectionHeading>
+        </div>
+
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -32,35 +39,14 @@ function ProjectMain() {
             duration: 0.7,
             ease: "easeOut",
           }}
-          viewport={{ once: false, amount: 0.1 }}
+          viewport={{ once: true, amount: 0.1 }}
         >
-          <ProjectItem project={projects[currentIndex]} />
+          {projects.map((project, index) => (
+            <div>
+              <ProjectItem key={index} project={project} />
+            </div>
+          ))}
         </motion.div>
-
-        <div className="flex gap-4 w-full justify-center">
-          <button
-            onClick={movePrev}
-            disabled={currentIndex === 0}
-            className={`flex justify-center items-center group w-[50px] h-[50px] ${
-              currentIndex === 0
-                ? "bg-accent/50 cursor-not-allowed"
-                : "bg-accent hover:bg-neonMagenta hover:shadow-[0_0_25px_#9F00FF] cursor-pointer"
-            } cursor-pointer rounded-md`}
-          >
-            <IoIosArrowBack className="text-3xl group-hover:text-secondary" />
-          </button>
-          <button
-            onClick={moveNext}
-            disabled={currentIndex === totalProjects - 1}
-            className={`flex justify-center items-center group w-[50px] h-[50px] ${
-              currentIndex === totalProjects - 1
-                ? "bg-accent/50 cursor-not-allowed"
-                : "bg-accent hover:bg-neonMagenta hover:shadow-[0_0_25px_#9F00FF] cursor-pointer"
-            } bg-accent cursor-pointer rounded-md`}
-          >
-            <IoIosArrowForward className="text-3xl group-hover:text-secondary" />
-          </button>
-        </div>
       </motion.div>
     </div>
   );
