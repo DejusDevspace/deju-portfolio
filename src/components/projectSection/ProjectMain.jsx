@@ -6,17 +6,6 @@ import { motion } from "framer-motion";
 import { IoIosArrowForward, IoIosArrowBack } from "react-icons/io";
 
 function ProjectMain() {
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const totalProjects = projects.length;
-
-  function moveNext() {
-    setCurrentIndex((prev) => prev + 1);
-  }
-
-  function movePrev() {
-    setCurrentIndex((prev) => prev - 1);
-  }
-
   return (
     <div className="relative flex justify-center items-center py-12 xl:py-24 overflow-hidden">
       <motion.div
