@@ -94,7 +94,7 @@ const projects = [
       live: "#",
       github: "https://github.com/DejusDevspace/CV-upload-CV-summarize-RAG-app",
     },
-    image: "../../assets/projects/election-app.png",
+    image: learningAssistantImg,
   },
 ];
 
