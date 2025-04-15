@@ -17,15 +17,17 @@ function AboutContent() {
   ];
 
   return (
-    <div className="flex flex-col gap-6 max-w-[800px] text-start w-full">
+    <div className="flex flex-col gap-6 max-w-[900px] text-start w-full">
       <div>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate id
-        nisi animi voluptates optio recusandae qui vitae consectetur magni,
-        obcaecati voluptatum similique tempora harum? Optio architecto
-        consequuntur minus sit quae. Lorem ipsum dolor sit amet consectetur
-        adipisicing elit. Odio dignissimos fugiat enim optio debitis! Nam
-        maiores quibusdam neque qui, molestias suscipit eum iusto quo laboriosam
-        odit eius delectus dolore explicabo!
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate id
+          nisi animi voluptates optio recusandae qui vitae consectetur magni,
+          obcaecati voluptatum similique tempora harum? Optio architecto
+          consequuntur minus sit quae. Lorem ipsum dolor sit amet consectetur
+          adipisicing elit. Odio dignissimos fugiat enim optio debitis! Nam
+          maiores quibusdam neque qui, molestias suscipit eum iusto quo
+          laboriosam odit eius delectus dolore explicabo!
+        </p>
       </div>
       <div className="flex gap-4">
         {data.map((dataItem, index) => {

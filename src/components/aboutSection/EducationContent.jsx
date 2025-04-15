@@ -16,7 +16,7 @@ const EducationContent = () => {
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 1 }}
       viewport={{ once: true }}
-      className="flex flex-col gap-8 xl:max-w-[900px] text-center xl:text-left p-4"
+      className="flex flex-col gap-8 xl:max-w-[900px] text-center xl:text-left"
     >
       <h2 className="h2 drop-shadow-[0_0_10px_#00ffff]">My education</h2>
       <p className="uppercase text-gray-400 leading-relaxed text-sm tracking-wide">

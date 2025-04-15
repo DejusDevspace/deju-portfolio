@@ -43,7 +43,7 @@ const ExperienceContent = () => {
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 1 }}
       viewport={{ once: true }}
-      className="flex flex-col gap-8 xl:max-w-[900px] text-center xl:text-left p-4"
+      className="flex flex-col gap-8 text-center xl:text-left"
     >
       {/* Section Heading */}
       <h2 className="h2 drop-shadow-[0_0_10px_#00ffff]">
