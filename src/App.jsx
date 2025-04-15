@@ -5,10 +5,10 @@ function App() {
   return (
     <div className="flex flex-col min-h-screen">
       <NavMain />
-      <main className="flex-grow flex flex-col justify-center items-center overflow-hidden">
+      <main className="bg-gray-800 flex-grow flex flex-col justify-center items-center overflow-hidden">
         <HeroMain />
         <AboutMain />
-        <div className="bg-gray-600 w-full">
+        <div className="bg-gray-800 w-full">
           <ProjectMain />
         </div>
       </main>
