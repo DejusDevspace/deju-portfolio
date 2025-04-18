@@ -12,7 +12,7 @@ function ProjectItem({ project }) {
     <motion.div
       className={`flex flex-col p-4 gap-6 xl:flex-row xl:gap-[30px] ${
         isNotEven ? "xl:flex-row-reverse" : ""
-      } mb-24 p-8 shadow-lg hover:shadow-neonMagenta transition-all duration-300`}
+      } mb-24 p-8 shadow-xl hover:shadow-neonMagenta transition-all duration-300`}
       whileHover={{ scale: 1.02 }}
     >
       {/* Text Section */}
