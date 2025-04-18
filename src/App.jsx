@@ -1,5 +1,11 @@
 import React from "react";
-import { NavMain, HeroMain, AboutMain, ProjectMain } from "./components";
+import {
+  NavMain,
+  HeroMain,
+  AboutMain,
+  ProjectMain,
+  ContactMain,
+} from "./components";
 
 function App() {
   return (
@@ -11,6 +17,7 @@ function App() {
         <div className="bg-gray-800 w-full">
           <ProjectMain />
         </div>
+        <ContactMain />
       </main>
     </div>
   );
