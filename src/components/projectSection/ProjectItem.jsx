@@ -12,7 +12,7 @@ function ProjectItem({ project }) {
     <motion.div
       className={`flex flex-col p-4 gap-6 xl:flex-row xl:gap-[30px] ${
         isNotEven ? "xl:flex-row-reverse" : ""
-      } mb-24 p-8 shadow-xl hover:shadow-neonMagenta transition-all duration-300`}
+      } rounded-xl my-24 p-8 shadow-2xl hover:shadow-lg hover:shadow-neonMagenta transition-all duration-300`}
       whileHover={{ scale: 1.02 }}
     >
       {/* Text Section */}
@@ -72,7 +72,7 @@ function ProjectItem({ project }) {
         viewport={{ once: true, amount: 0.2 }}
       >
         <div
-          className="relative group flex justify-center items-center bg-accent/10 rounded-lg shadow-md hover:shadow-accent transition-all duration-300
+          className="relative group flex justify-center items-center bg-accent/10 rounded-lg shadow-md transition-all duration-300
                         h-[250px] sm:h-[300px] md:h-[350px] xl:h-[460px] overflow-hidden"
         >
           <img
