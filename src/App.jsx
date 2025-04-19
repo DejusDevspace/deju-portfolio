@@ -9,12 +9,12 @@ import {
 
 function App() {
   return (
-    <div className="flex flex-col min-h-screen">
+    <div className="relative flex flex-col min-h-screen bg-gray-900 overflow-x-hidden">
       <NavMain />
-      <main className="bg-gray-800 flex-grow flex flex-col justify-center items-center overflow-hidden">
+      <main className="relative z-10 flex-grow flex flex-col justify-center items-center">
         <HeroMain />
         <AboutMain />
-        <div className="bg-gray-800 w-full">
+        <div className="w-full">
           <ProjectMain />
         </div>
         <ContactMain />
