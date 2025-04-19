@@ -9,7 +9,7 @@ import {
 
 function App() {
   return (
-    <div className="relative flex flex-col min-h-screen bg-gray-900 overflow-x-hidden">
+    <div className="relative flex flex-col min-h-screen bg-gray-900 z-0">
       <NavMain />
       <main className="relative z-10 flex-grow flex flex-col justify-center items-center">
         <HeroMain />
