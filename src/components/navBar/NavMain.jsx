@@ -5,10 +5,10 @@ import navList from "./navList";
 
 function NavMain() {
   return (
-    <header className="fixed bg-gray-800 w-full py-4 z-20">
+    <header className="fixed bg-gray-900 w-full py-4 z-20">
       <div className="container mx-auto flex justify-between items-center px-6 xl:px-4">
         <h1
-          className="text-3xl lg:text-5xl font-bold bg-gradient-to-r from-cyan-500 via-purple-500 to-pink-500
+          className="text-4xl font-bold bg-gradient-to-r from-cyan-500 via-purple-500 to-pink-500
         bg-clip-text text-transparent"
         >
           Deju
