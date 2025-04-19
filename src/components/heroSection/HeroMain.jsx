@@ -1,6 +1,7 @@
 import React from "react";
 import SectionHeading from "../common/SectionHeading";
 import DownloadCVButton from "../common/DownloadCVButton";
+import ToolsSpan from "./ToolSpan";
 
 function HeroMain() {
   return (
@@ -8,9 +9,10 @@ function HeroMain() {
       className="relative flex items-center justify-center min-h-screen bg-cover bg-center w-full"
       style={{ backgroundImage: "url('/src/assets/heroBg.jpg')" }}
     >
-      <div className="absolute inset-0 bg-black/80 bg-opacity-50"></div>
       {/* Overlay */}
-      <div className="relative z-5 flex flex-col text-center items-center justify-center text-white">
+      <div className="absolute inset-0 bg-black/80 bg-opacity-50" />
+
+      <div className="relative flex flex-col text-center items-center justify-center text-white">
         <SectionHeading text="Hi, I'm Deju" />
         <p className="text-md xl:text-lg mt-4">
           Full Stack Data Scientist | Generative AI | MLOps | Backend Developer{" "}
@@ -28,6 +30,9 @@ function HeroMain() {
             Hire Me
           </a>
         </DownloadCVButton>
+        <div className="">
+          <ToolsSpan />
+        </div>
       </div>
     </section>
   );
