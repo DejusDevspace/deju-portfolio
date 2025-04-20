@@ -8,7 +8,7 @@ const ToolsSpan = () => {
 
   return (
     <motion.div
-      className="w-full border-y border-primary bg-secondary py-6 overflow-hidden"
+      className="mt-24 w-full py-6 overflow-hidden"
       initial={{ opacity: 0, y: 50 }}
       whileInView={{ opacity: 1, y: 0 }}
       transition={{

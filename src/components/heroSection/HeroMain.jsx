@@ -30,9 +30,6 @@ function HeroMain() {
             Hire Me
           </a>
         </DownloadCVButton>
-        <div className="">
-          <ToolsSpan />
-        </div>
       </div>
     </section>
   );
