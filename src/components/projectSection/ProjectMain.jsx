@@ -31,9 +31,7 @@ function ProjectMain() {
           viewport={{ once: true, amount: 0.1 }}
         >
           {projects.map((project, index) => (
-            <div>
-              <ProjectItem key={index} project={project} />
-            </div>
+            <ProjectItem key={index} project={project} />
           ))}
         </motion.div>
       </motion.div>
