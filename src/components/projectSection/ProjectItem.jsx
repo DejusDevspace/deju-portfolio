@@ -6,18 +6,15 @@ import { motion } from "framer-motion";
 function ProjectItem({ project }) {
   const isNotEven = project.id % 2 !== 0;
   const textSlideFrom = isNotEven ? 100 : -100;
-  const imageSlideFrom = isNotEven ? -100 : 100;
 
   return (
     <motion.div
-      className={`flex flex-col p-4 gap-6 xl:flex-row xl:gap-[30px] ${
-        isNotEven ? "xl:flex-row-reverse" : ""
-      } rounded-xl my-24 p-8 shadow-2xl hover:shadow-lg hover:shadow-neonMagenta transition-all duration-300`}
+      className="rounded-xl my-12 p-8 xl:max-w-[40%] shadow-2xl hover:shadow-lg hover:shadow-neonMagenta transition-all duration-300"
       whileHover={{ scale: 1.02 }}
     >
       {/* Text Section */}
       <motion.div
-        className="w-full xl:w-[50%] flex flex-col gap-2 xl:justify-between order-2 xl:order-none"
+        className="flex flex-col gap-8"
         initial={{ opacity: 0, x: textSlideFrom }}
         whileInView={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.8, ease: "easeOut" }}
@@ -64,7 +61,7 @@ function ProjectItem({ project }) {
       </motion.div>
 
       {/* Image Section */}
-      <motion.div
+      {/* <motion.div
         className="w-full xl:w-[50%]"
         initial={{ opacity: 0, x: imageSlideFrom }}
         whileInView={{ opacity: 1, x: 0 }}
@@ -82,7 +79,7 @@ function ProjectItem({ project }) {
             loading="lazy"
           />
         </div>
-      </motion.div>
+      </motion.div> */}
     </motion.div>
   );
 }

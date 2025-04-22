@@ -29,6 +29,7 @@ function ProjectMain() {
             ease: "easeOut",
           }}
           viewport={{ once: true, amount: 0.1 }}
+          className="flex xl:flex-wrap justify-center gap-8 w-full"
         >
           {projects.map((project, index) => (
             <ProjectItem key={index} project={project} />
