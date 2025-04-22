@@ -5,26 +5,24 @@
 @import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap");
 @import "tailwindcss";
 
-@layer theme {
-  :root {
-    /* Fonts */
-    --font-primary: "JetBrains Mono", monospace;
-    --font-serif: "Montserrat", sans-serif;
-    --font-embela-cursive: "Emblema One", cursive;
-    --font-roboto: "Roboto", sans-serif;
-    --font-special: "Space Grotesk", sans-serif;
+@theme {
+  /* Fonts */
+  --font-primary: "JetBrains Mono", monospace;
+  --font-serif: "Montserrat", sans-serif;
+  --font-embela-cursive: "Emblema One", cursive;
+  --font-roboto: "Roboto", sans-serif;
+  --font-special: "Space Grotesk", sans-serif;
 
-    /* Colors */
-    --color-primary: white; /* Deep background black (main site background) */
-    --color-secondary: #1e1e1e; /* Secondary surface (cards/sections) */
-    --color-accent: #00ffff; /* Neon Blue (used for accents, buttons, etc.) */
-    --color-neonBlue: #00ffff; /* Same as accent for consistency */
-    --color-neonPurple: #9f00ff; /* Strong neon purple */
-    --color-neonMagenta: #ff00ff; /* Magenta glow elements or highlights */
+  /* Colors */
+  --color-primary: white; /* Deep background black (main site background) */
+  --color-secondary: #1e1e1e; /* Secondary surface (cards/sections) */
+  --color-accent: #00ffff; /* Neon Blue (used for accents, buttons, etc.) */
+  --color-neonBlue: #00ffff; /* Same as accent for consistency */
+  --color-neonPurple: #9f00ff; /* Strong neon purple */
+  --color-neonMagenta: #ff00ff; /* Magenta glow elements or highlights */
 
-    /* Neon Shadow for glow effects */
-    --shadow-neon: 0 0 10px #00ffff, 0 0 20px #00ffff, 0 0 30px #00ffff;
-  }
+  /* Neon Shadow for glow effects */
+  --shadow-neon: 0 0 10px #00ffff, 0 0 20px #00ffff, 0 0 30px #00ffff;
 }
 
 @layer base {
