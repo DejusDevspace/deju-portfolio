@@ -23,10 +23,7 @@ function AboutContent() {
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate id
           nisi animi voluptates optio recusandae qui vitae consectetur magni,
           obcaecati voluptatum similique tempora harum? Optio architecto
-          consequuntur minus sit quae. Lorem ipsum dolor sit amet consectetur
-          adipisicing elit. Odio dignissimos fugiat enim optio debitis! Nam
-          maiores quibusdam neque qui, molestias suscipit eum iusto quo
-          laboriosam odit eius delectus dolore explicabo!
+          consequuntur minus sit quae.
         </p>
       </div>
       <div className="flex gap-4">
@@ -38,7 +35,7 @@ function AboutContent() {
                 index === active
                   ? "text-accent border-b-2 border-accent"
                   : "text-accent/40"
-              } cursor-pointer hover:text-accent/60 transition-all duration-300`}
+              } rounded-lg p-4 bg-secondary cursor-pointer hover:text-accent/60 transition-all duration-300`}
               onClick={() => setActive(index)}
             >
               {dataItem.tag}
