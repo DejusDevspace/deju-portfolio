@@ -9,7 +9,7 @@ function ProjectItem({ project }) {
 
   return (
     <motion.div
-      className="rounded-xl my-12 p-8 xl:max-w-[40%] shadow-2xl hover:shadow-lg hover:shadow-neonMagenta transition-all duration-300"
+      className="rounded-xl my-12 p-8 xl:max-w-[40%] shadow-2xl hover:shadow-lg hover:shadow-neonBlue transition-all duration-300"
       whileHover={{ scale: 1.02 }}
     >
       {/* Text Section */}
