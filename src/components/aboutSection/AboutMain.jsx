@@ -2,16 +2,11 @@ import React from "react";
 import SectionHeading from "../common/SectionHeading";
 import GhibliAvatar from "./GhibliAvatar";
 import AboutContent from "./AboutContent";
+import ToolSpan from "./ToolSpan";
 
 function AboutMain() {
   return (
     <div className="relative container mx-auto my-12 xl:my-16">
-      {/* Glow Background */}
-      {/* <div className="absolute -z-10 inset-0 h-full w-full">
-        <div className="hidden xl:block absolute top-[-20%] left-[-40%] h-[800px] w-[800px] rounded-full bg-[radial-gradient(circle_400px_at_center,#fbfbfb36,transparent)] animate-pulse" />
-        <div className="hidden xl:block absolute bottom-[-20%] right-[-40%] h-[800px] w-[800px] rounded-full bg-[radial-gradient(circle_400px_at_center,#fbfbfb36,transparent)] animate-pulse" />
-      </div> */}
-
       <div className="flex flex-col items-center justify-center text-center px-6 xl:px-0 relative">
         <div className="flex flex-col gap-8 mb-8">
           <SectionHeading text="About">
@@ -27,6 +22,10 @@ function AboutMain() {
         <div className="flex flex-col gap-8 justify-center xl:flex-row w-full py-8">
           <GhibliAvatar />
           <AboutContent />
+        </div>
+        <div className="container mx-auto text-center flex flex-col pt-8 gap-4">
+          <p className="text-xl">Tools & Technologies</p>
+          <ToolSpan />
         </div>
       </div>
     </div>
