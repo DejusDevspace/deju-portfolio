@@ -5,13 +5,7 @@ import ToolsSpan from "./ToolSpan";
 
 function HeroMain() {
   return (
-    <section
-      className="relative flex items-center justify-center min-h-screen bg-cover bg-center w-full"
-      style={{ backgroundImage: "url('/src/assets/heroBg.jpg')" }}
-    >
-      {/* Overlay */}
-      <div className="absolute inset-0 bg-black/80 bg-opacity-50" />
-
+    <div className="relative flex items-center justify-center min-h-screen w-full">
       <div className="relative flex flex-col text-center items-center justify-center text-white">
         <SectionHeading text="Hi, I'm Deju" />
         <p className="text-md xl:text-lg mt-4">
@@ -31,7 +25,7 @@ function HeroMain() {
           </a>
         </DownloadCVButton>
       </div>
-    </section>
+    </div>
   );
 }
 
