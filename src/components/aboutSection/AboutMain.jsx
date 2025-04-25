@@ -18,11 +18,9 @@ function AboutMain() {
             molestias, delectus nobis aut deleniti cum? Minus nam minima commodi
             doloremque fuga expedita.
           </p>
-        </div>
-        <div className="flex flex-col gap-8 justify-center xl:flex-row w-full py-8">
-          <GhibliAvatar />
           <AboutContent />
         </div>
+        <div className="flex flex-col gap-8 justify-center xl:flex-row w-full py-8"></div>
         <div className="container mx-auto text-center flex flex-col pt-8 gap-4">
           <p className="text-xl">Tools & Technologies</p>
           <ToolSpan />

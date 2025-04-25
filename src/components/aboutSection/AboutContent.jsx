@@ -17,16 +17,8 @@ function AboutContent() {
   ];
 
   return (
-    <div className="flex flex-col gap-6 max-w-[900px] text-start w-full">
-      <div>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate id
-          nisi animi voluptates optio recusandae qui vitae consectetur magni,
-          obcaecati voluptatum similique tempora harum? Optio architecto
-          consequuntur minus sit quae.
-        </p>
-      </div>
-      <div className="flex gap-4">
+    <div className="flex flex-row gap-6 max-w-[900px] text-start w-full">
+      <div className="flex flex-col gap-4 ">
         {data.map((dataItem, index) => {
           return (
             <span
@@ -35,7 +27,7 @@ function AboutContent() {
                 index === active
                   ? "text-accent border-b-2 border-accent"
                   : "text-accent/40"
-              } rounded-lg p-4 bg-secondary cursor-pointer hover:text-accent/60 transition-all duration-300`}
+              } rounded-lg p-4 text-center bg-secondary cursor-pointer hover:text-accent/60 transition-all duration-300`}
               onClick={() => setActive(index)}
             >
               {dataItem.tag}
