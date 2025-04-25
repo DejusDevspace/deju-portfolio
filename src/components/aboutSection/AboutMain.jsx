@@ -12,11 +12,20 @@ function AboutMain() {
           <SectionHeading text="About">
             <span className="text-accent">Me</span>
           </SectionHeading>
-          <p className="max-w-[500px] xl:max-w-[800px] uppercase text-primary/60">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur
-            officia exercitationem, quos facere veritatis, quo rem cumque
-            molestias, delectus nobis aut deleniti cum? Minus nam minima commodi
-            doloremque fuga expedita.
+          <p className="max-w-[500px] xl:max-w-[800px] text-primary/60">
+            I’m a final-year{" "}
+            <span className="text-accent shadow-neonBlue">
+              Mechatronics Engineering
+            </span>{" "}
+            student at Bowen University, Iwo, Nigeria. I’m passionate about{" "}
+            <span className="text-accent">Artificial Intelligence</span> and
+            continually improving my skills in{" "}
+            <span className="text-accent">Machine Learning</span> and{" "}
+            <span className="text-accent">Data Science</span>, I’m also
+            proficient in{" "}
+            <span className="text-accent">full-stack web development</span>. I
+            love to code and play around and I'll still edit this section till I
+            am comfortable with the text.
           </p>
           <AboutContent />
         </div>
