@@ -36,7 +36,7 @@ function ContactMain() {
           <span className="text-accent">Me</span>
         </SectionHeading>
         <form
-          className="w-full max-w-2xl mt-12 bg-white/5 backdrop-blur-lg rounded-2xl border border-white/10 p-8 shadow-[0_0_20px_5px_var(--color-neonBlue)] flex flex-col gap-6"
+          className="w-full max-w-2xl mt-12 bg-white/5 backdrop-blur-lg rounded-2xl border border-white/10 p-8 xl:shadow-[0_0_20px_5px_var(--color-neonBlue)] flex flex-col gap-6"
           onSubmit={handleSubmit}
         >
           <div className="flex flex-col gap-2">
