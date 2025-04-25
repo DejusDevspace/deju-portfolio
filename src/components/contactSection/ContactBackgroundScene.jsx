@@ -51,7 +51,7 @@ const Comet = () => {
   );
 };
 
-const BackgroundScene = () => {
+const ContactBackgroundScene = () => {
   return (
     <div className="absolute top-0 left-0 w-full h-full z-0">
       <Canvas camera={{ position: [0, 0, 1] }}>
@@ -62,4 +62,4 @@ const BackgroundScene = () => {
   );
 };
 
-export default BackgroundScene;
+export default ContactBackgroundScene;

@@ -2,7 +2,7 @@ import React from "react";
 import { tools } from "./sectionData";
 import { motion } from "framer-motion";
 
-const ToolsSpan = () => {
+const ToolsSpan = ({ animateInverse }) => {
   return (
     <motion.div
       className="w-full overflow-hidden py-6 cursor-pointer"
@@ -16,7 +16,11 @@ const ToolsSpan = () => {
       viewport={{ once: true }}
     >
       <div className="flex whitespace-nowrap">
-        <div className="flex gap-12 animate-marquee">
+        <div
+          className={`flex gap-12 ${
+            animateInverse ? "animate-inverse-marquee" : "animate-marquee"
+          }`}
+        >
           {tools.map((tool, index) => (
             <div
               key={`first-${index}`}
@@ -29,7 +33,11 @@ const ToolsSpan = () => {
             </div>
           ))}
         </div>
-        <div className="flex gap-12 animate-marquee ml-12">
+        <div
+          className={`flex gap-12 ${
+            animateInverse ? "animate-inverse-marquee" : "animate-marquee"
+          } ml-12`}
+        >
           {tools.map((tool, index) => (
             <div
               key={`second-${index}`}

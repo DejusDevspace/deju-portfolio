@@ -7,7 +7,7 @@ import ToolSpan from "./ToolSpan";
 function AboutMain() {
   return (
     <div className="relative container mx-auto my-12 xl:my-16">
-      <div className="flex flex-col items-center justify-center text-center px-6 xl:px-0 relative">
+      <div className="flex flex-col items-center justify-center text-center px-6 xl:px-0 relative gap-8">
         <div className="flex flex-col gap-8 mb-8">
           <SectionHeading text="About">
             <span className="text-accent">Me</span>
@@ -20,10 +20,10 @@ function AboutMain() {
           </p>
           <AboutContent />
         </div>
-        <div className="flex flex-col gap-8 justify-center xl:flex-row w-full py-8"></div>
-        <div className="container mx-auto text-center flex flex-col pt-8 gap-4">
-          <p className="text-xl">Tools & Technologies</p>
-          <ToolSpan />
+        <div className="container mx-auto text-center flex flex-col my-12 gap-6">
+          <SectionHeading text="Tools & Technologies" />
+          <ToolSpan animateInverse={false} />
+          <ToolSpan animateInverse={true} />
         </div>
       </div>
     </div>

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import SectionHeading from "../common/SectionHeading";
-import BackgroundScene from "./BackgroundScene";
+import ContactBackgroundScene from "./ContactBackgroundScene";
 
 function ContactMain() {
   const [formData, setFormData] = useState({
@@ -29,7 +29,7 @@ function ContactMain() {
   return (
     <div className="relative min-h-[100vh] w-[100vw] overflow-hidden">
       {/* 3D background */}
-      <BackgroundScene />
+      <ContactBackgroundScene />
       {/* Content */}
       <div className="relative z-10 container mx-auto flex flex-col items-center gap-4 py-12 xl:py-24 px-4">
         <SectionHeading text="Contact">

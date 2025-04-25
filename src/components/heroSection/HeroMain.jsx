@@ -1,12 +1,12 @@
 import React from "react";
 import SectionHeading from "../common/SectionHeading";
 import DownloadCVButton from "../common/DownloadCVButton";
-import BackgroundScene from "../contactSection/BackgroundScene";
+import HeroBackgroundScene from "./HeroBackgroundScene";
 
 function HeroMain() {
   return (
     <div className="relative flex items-center justify-center min-h-screen w-full">
-      <BackgroundScene />
+      <HeroBackgroundScene />
       <div className="relative flex flex-col text-center items-center justify-center text-white">
         <SectionHeading text="Hi, I'm Deju" />
         <p className="text-md xl:text-lg mt-4">
