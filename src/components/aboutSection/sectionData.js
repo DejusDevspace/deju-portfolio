@@ -32,7 +32,7 @@ const tools = [
   { name: "Linux", icon: FaLinux },
   { name: "Azure", icon: VscAzure },
   { name: "Git", icon: FaGitAlt },
-  { name: "React", icon: FaReact },
+  { name: "React.js", icon: FaReact },
   { name: "Node.js", icon: FaNodeJs },
   { name: "PostgreSQL", icon: SiPostgresql },
   { name: "GitHub", icon: FaGithub },

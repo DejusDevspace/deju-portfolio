@@ -43,20 +43,19 @@ const ExperienceContent = () => {
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 1 }}
       viewport={{ once: true }}
-      className="flex flex-col gap-8 text-center xl:text-left"
+      className="flex flex-col gap-8 text-center justify-center items-center"
     >
-      {/* Section Heading */}
-      <h2 className="h2 drop-shadow-[0_0_10px_#00ffff]">
-        Professional Journey
-      </h2>
-      <p className="uppercase text-gray-400 leading-relaxed text-sm tracking-wide">
+      <p
+        className="uppercase text-gray-400 leading-relaxed text-sm tracking-wide 
+      max-w-[500px] xl:max-w-[800px]"
+      >
         Explore my career path, featuring key roles and impactful contributions
         across diverse organizations. Discover how each experience has shaped my
         professional growth and expertise.
       </p>
 
       {/* Experience Cards */}
-      <div className="flex flex-col xl:flex-row flex-wrap gap-6 justify-center text-center xl:text-start xl:justify-start">
+      <div className="flex flex-col xl:flex-row flex-wrap gap-6 justify-center text-center xl:text-start">
         {data.map((item, index) => (
           <motion.div
             key={index}

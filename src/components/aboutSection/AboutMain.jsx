@@ -1,7 +1,7 @@
 import React from "react";
 import SectionHeading from "../common/SectionHeading";
-import GhibliAvatar from "./GhibliAvatar";
 import AboutContent from "./AboutContent";
+import ExperienceContent from "./ExperienceContent";
 import ToolSpan from "./ToolSpan";
 
 function AboutMain() {
@@ -28,6 +28,14 @@ function AboutMain() {
             am comfortable with the text.
           </p>
           <AboutContent />
+        </div>
+        <div className="container mx-auto text-center flex flex-col my-12">
+          <div className="flex flex-col gap-6 justify-center items-center">
+            <SectionHeading text="My">
+              <span className="text-accent">Experience</span>
+            </SectionHeading>
+            <ExperienceContent />
+          </div>
         </div>
         <div className="container mx-auto text-center flex flex-col my-12 gap-6">
           <SectionHeading text="Tools & Technologies" />
