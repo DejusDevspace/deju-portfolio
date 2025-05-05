@@ -67,11 +67,21 @@
     }
   }
 
+  @keyframes blink {
+    50% {
+      opacity: 0;
+    }
+  }
+
   .animate-marquee {
     animation: marquee 25s linear infinite;
   }
 
   .animate-inverse-marquee {
     animation: inverse-marquee 25s linear infinite;
+  }
+
+  .animate-blink {
+    animation: blink 1s step-start infinite;
   }
 }
