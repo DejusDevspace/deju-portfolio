@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import SectionHeading from "../common/SectionHeading";
 import DownloadCVButton from "../common/DownloadCVButton";
 import HeroBackgroundScene from "./HeroBackgroundScene";

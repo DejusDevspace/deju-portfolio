@@ -1,0 +1,36 @@
+# ---------- Hero Section ---------- #
+- Background image of workspace
+- Continuous fed live text...few of:
+  > I'm Ojomideju Adejo
+  > I'm a Machine Learning Engineer
+  > I'm an AI Engineer
+  > I'm a Data Scientist
+  > I'm a full-stack developer
+- Download cv button, hire me button
+? Section below hero section with tools span - fade at entry and exit
+
+
+# ---------- Portfolio Section---------- #
+- Buttons to filter projects based on type
+
+# ---------- About Section ---------- #
+- Different details dropped down respectively from a toggle menu
+  > Bio
+  > Education
+  > Experience
+- Double tools span in opposite directions
+
+# ---------- Contact Section ---------- #
+# ---------- ---------- #
+# ---------- ---------- #
+
+
+COLOR CONSIDERATIONS
+-- Accent: #693382
+-- Background: #1e1e1e (current secondary color)
+-- Background: #111111
+-- Background: #010b20
+-- Secondary color: #010b23
+
+TIPS
+-- Reduce buzzwords and come up with more simple and personalized content
