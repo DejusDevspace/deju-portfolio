@@ -4,7 +4,7 @@ import AboutContent from "./AboutContent";
 import ExperienceContent from "./ExperienceContent";
 import ToolSpan from "./ToolSpan";
 
-function AboutMain() {
+const AboutMain = () => {
   return (
     <div className="relative container mx-auto my-12 xl:my-16">
       <div className="flex flex-col items-center justify-center text-center px-6 xl:px-0 relative gap-8">
@@ -45,6 +45,6 @@ function AboutMain() {
       </div>
     </div>
   );
-}
+};
 
 export default AboutMain;

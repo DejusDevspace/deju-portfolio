@@ -3,7 +3,7 @@ import DesktopNav from "./DesktopNav";
 import MobileNav from "./MobileNav";
 import navList from "./navList";
 
-function NavMain() {
+const NavMain = () => {
   const [isSelected, setSelected] = useState(0);
 
   const handleSelect = (id) => {
@@ -22,11 +22,11 @@ function NavMain() {
           />
         </div>
         <div className="lg:hidden">
-          <MobileNav data={navList} />
+          <MobileNav />
         </div>
       </div>
     </header>
   );
-}
+};
 
 export default NavMain;

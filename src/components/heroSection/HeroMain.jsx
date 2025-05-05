@@ -3,7 +3,7 @@ import SectionHeading from "../common/SectionHeading";
 import DownloadCVButton from "../common/DownloadCVButton";
 import HeroBackgroundScene from "./HeroBackgroundScene";
 
-function HeroMain() {
+const HeroMain = () => {
   const fullText = "Hi, I'm Deju.";
   const [displayedText, setDisplayedText] = useState("");
   const [index, setIndex] = useState(0);
@@ -50,6 +50,6 @@ function HeroMain() {
       </div>
     </div>
   );
-}
+};
 
 export default HeroMain;

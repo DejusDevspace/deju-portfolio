@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import SectionHeading from "../common/SectionHeading";
 import ContactBackgroundScene from "./ContactBackgroundScene";
 
-function ContactMain() {
+const ContactMain = () => {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -102,6 +102,6 @@ function ContactMain() {
       </div>
     </div>
   );
-}
+};
 
 export default ContactMain;

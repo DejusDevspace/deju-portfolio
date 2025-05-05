@@ -3,7 +3,7 @@ import { GoArrowUpRight } from "react-icons/go";
 import { FaGithub } from "react-icons/fa";
 import { motion } from "framer-motion";
 
-function ProjectItem({ project }) {
+const ProjectItem = ({ project }) => {
   const isNotEven = project.id % 2 !== 0;
   const textSlideFrom = isNotEven ? 100 : -100;
 
@@ -82,6 +82,6 @@ function ProjectItem({ project }) {
       </motion.div> */}
     </motion.div>
   );
-}
+};
 
 export default ProjectItem;

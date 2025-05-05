@@ -1,16 +1,14 @@
 import React from "react";
 
-function DesktopNav(props) {
-  const navList = props.data;
-
+const DesktopNav = ({ data, active, onClick }) => {
   return (
     <nav className="flex gap-8 list-none">
-      {navList.map((item, index) => (
-        <li key={index} onClick={() => props.onClick(index)}>
+      {data.map((item, index) => (
+        <li key={index} onClick={() => onClick(index)}>
           <a
             href={`#${item.toLowerCase()}`}
             className={`${
-              props.active === index ? "text-accent" : "text-primary"
+              active === index ? "text-accent" : "text-primary"
             } hover:text-accent/70 transition-all duration-300`}
           >
             {item}
@@ -19,6 +17,6 @@ function DesktopNav(props) {
       ))}
     </nav>
   );
-}
+};
 
 export default DesktopNav;

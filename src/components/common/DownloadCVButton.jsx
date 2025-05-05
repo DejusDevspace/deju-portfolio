@@ -1,7 +1,7 @@
 import React from "react";
 import { FiDownload } from "react-icons/fi";
 
-function DownloadCVButton({ children }) {
+const DownloadCVButton = ({ children }) => {
   return (
     <div className="flex flex-col xl:flex-row items-center gap-8 mt-4">
       <a
@@ -17,6 +17,6 @@ function DownloadCVButton({ children }) {
       {children}
     </div>
   );
-}
+};
 
 export default DownloadCVButton;

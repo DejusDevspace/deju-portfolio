@@ -3,9 +3,8 @@ import SectionHeading from "../common/SectionHeading";
 import { projects } from "./sectionData";
 import ProjectItem from "./ProjectItem";
 import { motion } from "framer-motion";
-import { IoIosArrowForward, IoIosArrowBack } from "react-icons/io";
 
-function ProjectMain() {
+const ProjectMain = () => {
   return (
     <div className="relative flex justify-center items-center py-12 overflow-hidden">
       <motion.div
@@ -38,6 +37,6 @@ function ProjectMain() {
       </motion.div>
     </div>
   );
-}
+};
 
 export default ProjectMain;

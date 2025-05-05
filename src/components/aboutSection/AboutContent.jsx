@@ -3,12 +3,12 @@ import BioContent from "./BioContent";
 import ExperienceContent from "./ExperienceContent";
 import EducationContent from "./EducationContent";
 
-function AboutContent() {
+const AboutContent = () => {
   const [active, setIsActive] = useState(0);
 
-  function setActive(id) {
+  const setActive = (id) => {
     setIsActive(id);
-  }
+  };
 
   const data = [
     { tag: "Bio", content: BioContent },
@@ -19,6 +19,6 @@ function AboutContent() {
   return (
     <div className="flex flex-row gap-6 max-w-[900px] text-start w-full"></div>
   );
-}
+};
 
 export default AboutContent;
