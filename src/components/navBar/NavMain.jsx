@@ -13,7 +13,7 @@ function NavMain() {
   return (
     <header className="fixed w-full py-4 z-20 bg-background">
       <div className="container mx-auto flex justify-between items-center px-6 xl:px-4">
-        <h1 className="text-2xl font-bold">Deju</h1>
+        <h1 className="text-xl xl:text-2xl font-bold">Deju</h1>
         <div className="hidden lg:flex">
           <DesktopNav
             data={navList}
