@@ -1,12 +1,12 @@
 import React, { useState } from "react";
 import SectionHeading from "../common/SectionHeading";
 import { projects } from "./sectionData";
-import ProjectItem from "./ProjectItem";
+import ProjectCard from "./ProjectCard";
 import { motion } from "framer-motion";
 
 const ProjectMain = () => {
   return (
-    <div className="relative flex justify-center items-center py-12 overflow-hidden">
+    <div className="relative flex justify-center items-center py-8 overflow-hidden">
       <motion.div
         className="container mx-auto relative z-10 flex flex-col gap-12 xl:gap-24"
         initial={{ opacity: 0, y: 50 }}
@@ -28,10 +28,10 @@ const ProjectMain = () => {
             ease: "easeOut",
           }}
           viewport={{ once: true, amount: 0.1 }}
-          className="flex flex-wrap w-full p-4 justify-center gap-8 "
+          className="flex flex-wrap p-4 justify-center gap-8 "
         >
           {projects.map((project, index) => (
-            <ProjectItem key={index} project={project} />
+            <ProjectCard key={index} project={project} />
           ))}
         </motion.div>
       </motion.div>
