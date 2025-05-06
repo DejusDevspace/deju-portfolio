@@ -32,5 +32,9 @@ COLOR CONSIDERATIONS
 -- Background: #010b20
 -- Secondary color: #010b23
 
-TIPS
+TODOs
 -- Reduce buzzwords and come up with more simple and personalized content
+-- Change ui design to be more acccomodation: smaller elements
+-- Redesign about section
+-- Redesign project cards
+-- Redesign experience section
