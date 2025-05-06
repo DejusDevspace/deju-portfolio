@@ -29,7 +29,7 @@ const ProjectCard = ({ project }) => {
         <p className="text-primary/50 text-sm xl:text-md">
           {project.description}
         </p>
-        <ul className="flex gap-4 flex-wrap">
+        <ul className="flex gap-1.5 flex-wrap">
           {project.stack.map((item, index) => (
             <li key={index} className="text-sm xl:text-md text-accent/70">
               {item.name}
