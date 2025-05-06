@@ -34,7 +34,7 @@ COLOR CONSIDERATIONS
 
 TODOs
 -- Reduce buzzwords and come up with more simple and personalized content
--- Change ui design to be more acccomodation: smaller elements
+-- Change ui design to be more acccomodating: smaller elements
 -- Redesign about section
 -- Redesign project cards
 -- Redesign experience section

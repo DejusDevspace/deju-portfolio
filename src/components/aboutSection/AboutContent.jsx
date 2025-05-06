@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import BioContent from "./BioContent";
-import ExperienceContent from "./ExperienceContent";
 import EducationContent from "./EducationContent";
 
 const AboutContent = () => {
@@ -13,7 +12,7 @@ const AboutContent = () => {
   const data = [
     { tag: "Bio", content: BioContent },
     { tag: "Education", content: EducationContent },
-    { tag: "Experience", content: ExperienceContent },
+    // { tag: "Experience", content: ExperienceContent },
   ];
 
   return (

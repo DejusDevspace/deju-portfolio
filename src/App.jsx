@@ -5,6 +5,7 @@ import {
   AboutMain,
   ProjectMain,
   ContactMain,
+  ExperienceMain,
 } from "./components";
 
 function App() {
@@ -14,6 +15,7 @@ function App() {
       <main className="relative z-10 flex-grow flex flex-col justify-center items-center">
         <HeroMain />
         <AboutMain />
+        <ExperienceMain />
         <div className="w-full">
           <ProjectMain />
         </div>
