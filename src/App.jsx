@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   NavMain,
   HeroMain,
@@ -7,21 +7,27 @@ import {
   ContactMain,
   ExperienceMain,
 } from "./components";
+import LoadingScreen from "./components/layout/LoadingScreen";
 
 function App() {
+  const [isLoaded, setIsLoaded] = useState(false);
   return (
-    <div className="relative flex flex-col overflow-x-hidden z-0">
-      <NavMain />
-      <main className="relative z-10 flex-grow flex flex-col justify-center items-center">
-        <HeroMain />
-        <AboutMain />
-        <ExperienceMain />
-        <div className="w-full">
-          <ProjectMain />
-        </div>
-        <ContactMain />
-      </main>
-    </div>
+    <>
+      {/* {!isLoaded && <LoadingScreen onComplete={() => setIsLoaded(true)} />} */}
+
+      <div className="relative flex flex-col overflow-x-hidden z-0">
+        <NavMain />
+        <main className="relative z-10 flex-grow flex flex-col justify-center items-center">
+          <HeroMain />
+          <AboutMain />
+          <ExperienceMain />
+          <div className="w-full">
+            <ProjectMain />
+          </div>
+          <ContactMain />
+        </main>
+      </div>
+    </>
   );
 }
 

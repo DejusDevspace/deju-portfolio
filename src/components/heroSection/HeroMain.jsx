@@ -13,7 +13,7 @@ const HeroMain = () => {
       const timeout = setTimeout(() => {
         setDisplayedText((prev) => prev + fullText[index]);
         setIndex(index + 1);
-      }, 200);
+      }, 150);
       return () => clearTimeout(timeout);
     }
   }, [index]);

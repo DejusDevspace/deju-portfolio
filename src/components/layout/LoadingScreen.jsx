@@ -1,9 +1,9 @@
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 
-function LoadingScreen({ onComplete }) {
+const LoadingScreen = ({ onComplete }) => {
   const [text, setText] = useState("");
-  const fullText = "<404. />";
+  const fullText = "<Welcome. />";
 
   useEffect(() => {
     let index = 0;
@@ -41,6 +41,6 @@ function LoadingScreen({ onComplete }) {
       </div>
     </motion.div>
   );
-}
+};
 
 export default LoadingScreen;
