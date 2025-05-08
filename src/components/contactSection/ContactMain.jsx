@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import SectionHeading from "../common/SectionHeading";
+import SectionHeading from "../layout/SectionHeading";
 import ContactBackgroundScene from "./ContactBackgroundScene";
 
 const ContactMain = () => {

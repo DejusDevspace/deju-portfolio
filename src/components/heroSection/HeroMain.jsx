@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import SectionHeading from "../common/SectionHeading";
+import SectionHeading from "../layout/SectionHeading";
 import DownloadCVButton from "../common/DownloadCVButton";
 import HeroBackgroundScene from "./HeroBackgroundScene";
 
@@ -40,8 +40,8 @@ const HeroMain = () => {
             href="https://www.linkedin.com/in/deju-adejo/"
             target="_blank"
             rel="noopener noreferrer"
-            className="hidden xl:block bg-cyan-400 text-black font-bold py-3 px-6 rounded-lg cursor-pointer 
-              shadow-[0_0_15px_#00FFFF] hover:bg-purple-600 hover:text-white hover:shadow-[0_0_25px_#9F00FF] 
+            className="hidden xl:block bg-cyan-400 text-black font-bold py-3 px-6 rounded-lg cursor-pointer
+              shadow-[0_0_15px_#00FFFF] hover:bg-purple-600 hover:text-white hover:shadow-[0_0_25px_#9F00FF]
               transition-all duration-300"
           >
             Hire Me

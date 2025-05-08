@@ -1,5 +1,5 @@
 import React from "react";
-import SectionHeading from "../common/SectionHeading";
+import SectionHeading from "../layout/SectionHeading";
 import AboutContent from "./AboutContent";
 import ToolSpan from "./ToolSpan";
 

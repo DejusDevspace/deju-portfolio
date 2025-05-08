@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import SectionHeading from "../common/SectionHeading";
+import SectionHeading from "../layout/SectionHeading";
 import { projects } from "./sectionData";
 import ProjectCard from "./ProjectCard";
 import { motion } from "framer-motion";
