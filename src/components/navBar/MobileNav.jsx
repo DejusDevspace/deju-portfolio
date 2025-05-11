@@ -19,7 +19,14 @@ const SocialIcon = ({ icon: Icon, link }) => {
   );
 };
 
-const MobileNav = () => {
+const MobileNav = ({ data }) => {
+  const [isOpen, setIsOpen] = useState(false);
+  const navList = data;
+
+  const toggleMenu = () => {
+    setIsOpen(!isOpen);
+  };
+
   const socialLinks = [
     {
       icon: TbBrandLinkedinFilled,
@@ -43,34 +50,36 @@ const MobileNav = () => {
           <SocialIcon key={index} icon={social.icon} link={social.link} />
         ))}
       </div>
-      {/* <CiMenuFries
-        className="text-[32px] cursor-pointer"
-        onClick={toggleMenu}
-      /> */}
 
-      {/* <AnimatePresence>
-        {isOpen && (
-          <motion.ul
-            initial={{ opacity: 0, y: -10 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -10 }}
-            className="absolute right-0 mt-4 bg-secondary text-primary rounded-lg shadow-lg 
-            py-4 px-6 flex flex-col gap-4 z-100"
-          >
-            {navList.map((link, index) => (
-              <li
-                key={index}
-                onClick={() => {
-                  toggleMenu();
-                }}
-                className="hover:text-accent cursor-pointer capitalize"
-              >
-                <a href="#">{link}</a>
-              </li>
-            ))}
-          </motion.ul>
-        )}
-      </AnimatePresence> */}
+      <div className="fixed bottom-0 right-0 p-4 m-4 z-20 rounded-full bg-gray-800">
+        <CiMenuFries
+          className="text-[32px] cursor-pointer"
+          onClick={toggleMenu}
+        />
+        <AnimatePresence>
+          {isOpen && (
+            <motion.ul
+              initial={{ opacity: 0, y: -10 }}
+              animate={{ opacity: 1, y: -250 }}
+              exit={{ opacity: 0, y: -10 }}
+              className="absolute right-0 mt-4 bg-gray-800 rounded-lg shadow-lg
+            py-4 px-6 flex flex-col gap-4 z-20"
+            >
+              {navList.map((link, index) => (
+                <li
+                  key={index}
+                  onClick={() => {
+                    toggleMenu();
+                  }}
+                  className="hover:text-accent cursor-pointer capitalize"
+                >
+                  <a href="#">{link}</a>
+                </li>
+              ))}
+            </motion.ul>
+          )}
+        </AnimatePresence>
+      </div>
     </motion.div>
   );
 };

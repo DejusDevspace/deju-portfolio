@@ -22,7 +22,7 @@ const NavMain = () => {
           />
         </div>
         <div className="lg:hidden">
-          <MobileNav />
+          <MobileNav data={navList} />
         </div>
       </div>
     </header>
