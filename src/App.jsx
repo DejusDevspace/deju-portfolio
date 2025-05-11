@@ -8,6 +8,7 @@ import {
   ExperienceMain,
 } from "./components";
 import LoadingScreen from "./components/layout/LoadingScreen";
+import TerminalWindow from "./components/aboutSection/TerminalWindow";
 
 function App() {
   const [isLoaded, setIsLoaded] = useState(false);
@@ -19,7 +20,8 @@ function App() {
         <NavMain />
         <main className="relative z-10 flex-grow flex flex-col justify-center items-center">
           <HeroMain />
-          <AboutMain />
+          {/* <AboutMain /> */}
+          <TerminalWindow />
           <ExperienceMain />
           <div className="w-full">
             <ProjectMain />
