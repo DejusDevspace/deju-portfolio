@@ -20,8 +20,8 @@ function App() {
         <NavMain />
         <main className="relative z-10 flex-grow flex flex-col justify-center items-center">
           <HeroMain />
-          {/* <AboutMain /> */}
-          <TerminalWindow />
+          <AboutMain />
+          {/* <TerminalWindow /> */}
           <ExperienceMain />
           <div className="w-full">
             <ProjectMain />
