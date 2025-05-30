@@ -21,7 +21,7 @@ const HeroMain = () => {
   return (
     <div className="relative flex items-center justify-center min-h-screen w-full">
       {/* <HeroBackgroundScene /> */}
-      <div className="relative flex flex-col text-center items-center justify-center text-white">
+      <section className="relative flex flex-col text-center items-center justify-center text-white">
         <SectionHeading
           text={
             <>
@@ -30,24 +30,21 @@ const HeroMain = () => {
             </>
           }
         />
-        <p className="text-md xl:text-lg max-w-[500px] px-2 xl:max-w-[800px] my-4">
-          I am a final year Mechatronics Engineering student at Bowen
-          University. I love doing one thing or the other with code. I would
-          fill this section when I have clearer ideas
+        <p className="text-md xl:text-lg max-w-[500px] px-2 xl:max-w-[800px] my-4 text-primary/80">
+          Just a curios human who turns ☕ + 💻 into fun projects.
         </p>
         <DownloadCVButton>
-          <a
+          {/* <a
             href="https://www.linkedin.com/in/deju-adejo/"
             target="_blank"
             rel="noopener noreferrer"
             className="hidden xl:block bg-cyan-400 text-black font-bold py-3 px-6 rounded-lg cursor-pointer
-              shadow-[0_0_15px_#00FFFF] hover:bg-purple-600 hover:text-white hover:shadow-[0_0_25px_#9F00FF]
-              transition-all duration-300"
+              shadow-[0_0_15px_#00FFFF] hover:text-white transition-all duration-300"
           >
             Hire Me
-          </a>
+          </a> */}
         </DownloadCVButton>
-      </div>
+      </section>
     </div>
   );
 };
