@@ -33,8 +33,6 @@ COLOR CONSIDERATIONS
 -- Secondary color: #010b23
 
 TODOs
--- Reduce buzzwords and come up with more simple and personalized content
--- Change ui design to be more acccomodating: smaller elements
 -- Redesign about section
--- Redesign project cards
--- Redesign experience section
+-- Design experience section
+-- Show first few project and add "view more" button to toggle more projects

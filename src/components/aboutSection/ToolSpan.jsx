@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 const ToolsSpan = ({ animateInverse }) => {
   return (
     <motion.div
-      className="w-full overflow-hidden py-6 cursor-pointer"
+      className="overflow-hidden py-2 cursor-pointer"
       initial={{ opacity: 0, y: 50 }}
       whileInView={{ opacity: 1, y: 0 }}
       transition={{
@@ -15,7 +15,7 @@ const ToolsSpan = ({ animateInverse }) => {
       }}
       viewport={{ once: true }}
     >
-      <div className="flex whitespace-nowrap">
+      <div className="flex whitespace-nowrap overflow-hidden">
         <div
           className={`flex gap-12 ${
             animateInverse ? "animate-inverse-marquee" : "animate-marquee"
@@ -24,9 +24,10 @@ const ToolsSpan = ({ animateInverse }) => {
           {tools.map((tool, index) => (
             <div
               key={`first-${index}`}
-              className="flex items-center gap-2 hover:text-neonBlue transition-all duration-300 text-2xl xl:text-3xl font-semibold uppercase hover:drop-shadow-[0_0_6px_#00ffff]"
+              className="flex items-center gap-2 hover:text-neonBlue transition-all duration-300
+              text-xl font-semibold uppercase hover:drop-shadow-[0_0_6px_#00ffff]"
             >
-              <span className="text-3xl">
+              <span className="text-xl">
                 <tool.icon />
               </span>
               <p>{tool.name}</p>
@@ -41,9 +42,10 @@ const ToolsSpan = ({ animateInverse }) => {
           {tools.map((tool, index) => (
             <div
               key={`second-${index}`}
-              className="flex items-center gap-2 hover:text-neonBlue transition-all duration-300 text-2xl xl:text-3xl font-semibold uppercase hover:drop-shadow-[0_0_6px_#00ffff]"
+              className="flex items-center gap-2 hover:text-neonBlue transition-all duration-300
+              text-xl font-semibold uppercase hover:drop-shadow-[0_0_6px_#00ffff]"
             >
-              <span className="text-3xl">
+              <span className="text-xl">
                 <tool.icon />
               </span>
               <p>{tool.name}</p>
