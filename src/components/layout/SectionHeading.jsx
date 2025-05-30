@@ -2,9 +2,12 @@ import React from "react";
 
 const SectionHeading = ({ text, children }) => {
   return (
-    <h1 className="text-3xl xl:text-5xl font-bold leading-tight">
-      {text} {children}
-    </h1>
+    <div className="flex items-center mb-8">
+      <span className="text-4xl text-accent-primary mr-4">
+        /{text} {children}
+      </span>
+      <div className="flex-grow border-b border-gray-600"></div>
+    </div>
   );
 };
 

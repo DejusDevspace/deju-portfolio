@@ -8,8 +8,8 @@ const AboutMain = () => {
     <div className="relative container mx-auto my-12 xl:my-16">
       <div className="flex flex-col items-center justify-center text-center px-6 xl:px-0 relative gap-8">
         <div className="flex flex-col gap-8 mb-8">
-          <SectionHeading text="About">
-            <span className="text-accent">Me</span>
+          <SectionHeading text="about">
+            <span className="text-accent">me</span>
           </SectionHeading>
           <p className="max-w-[500px] xl:max-w-[800px] text-primary/60">
             I’m a final-year{" "}
