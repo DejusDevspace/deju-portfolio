@@ -27,7 +27,7 @@ const HeroMain = () => {
           <span className="text-accent animate-blink">|</span>
         </h1>
         <p className="text-sm xl:text-lg max-w-[500px] px-2 xl:max-w-[800px] my-4 text-primary/80">
-          Just a curios human who turns ☕ + 💻 into fun and useful projects...
+          Just a curious human who turns ☕ + 💻 into fun and useful projects...
         </p>
         <DownloadCVButton />
       </div>
