@@ -58,6 +58,26 @@ const projects = [
     image: beanClassificationImg,
   },
   {
+    id: 5,
+    num: "06",
+    name: "Executive Election App",
+    category: "Full Stack",
+    description:
+      "Built an improved version of the election web app for a larger election process across my college.",
+    stack: [
+      { name: "React.js" },
+      { name: "Node.js" },
+      { name: "Express.js" },
+      { name: "PostgreSQL" },
+      { name: "Render" },
+    ],
+    links: {
+      live: "https://baeselections.vercel.app/",
+      github: "https://github.com/DejusDevspace/baes-election-website",
+    },
+    image: electionImg,
+  },
+  {
     id: 3,
     num: "04",
     name: "Election Web App",
