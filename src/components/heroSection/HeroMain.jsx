@@ -22,11 +22,11 @@ const HeroMain = () => {
     <div className="relative flex items-center justify-center min-h-screen w-full">
       {/* <HeroBackgroundScene /> */}
       <section className="relative flex flex-col text-center items-center justify-center text-white">
-        <h1 className="text-5xl">
+        <h1 className="text-3xl xl:text-5xl">
           {displayedText}
           <span className="text-accent animate-blink">|</span>
         </h1>
-        <p className="text-md xl:text-lg max-w-[500px] px-2 xl:max-w-[800px] my-4 text-primary/80">
+        <p className="text-sm xl:text-lg max-w-[500px] px-2 xl:max-w-[800px] my-4 text-primary/80">
           Just a curios human who turns ☕ + 💻 into fun projects.
         </p>
         <DownloadCVButton>
