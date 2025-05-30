@@ -15,12 +15,9 @@ const ProjectMain = () => {
         viewport={{ once: true, amount: 0.1 }}
       >
         <div className="flex flex-col w-full xl:mx-[10%] xl:px-[10%] gap-8 mb-8">
-          {/* <div className=""> */}
           <SectionHeading text="my">
             <span className="text-accent">projects</span>
           </SectionHeading>
-          {/* </div> */}
-
           <motion.div
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
