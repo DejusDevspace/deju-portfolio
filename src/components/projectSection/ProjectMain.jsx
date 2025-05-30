@@ -6,34 +6,36 @@ import { motion } from "framer-motion";
 
 const ProjectMain = () => {
   return (
-    <div className="relative flex justify-center items-center py-8 overflow-hidden">
+    <div className="relative container mx-auto overflow-hidden my-12 xl:my-16">
       <motion.div
-        className="container mx-auto relative z-10 flex flex-col gap-12 xl:gap-24"
+        className="relative flex flex-col justify-center items-center px-6 xl:px-0 gap-12"
         initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5, ease: "easeOut" }}
         viewport={{ once: true, amount: 0.1 }}
       >
-        <div className="flex justify-center">
-          <SectionHeading text="My">
-            <span className="text-accent">Projects</span>
-          </SectionHeading>
-        </div>
+        <div className="flex flex-col gap-8 mb-8">
+          <div className="w-full xl:mx-[5%] xl:px-[5%]">
+            <SectionHeading text="my">
+              <span className="text-accent">projects</span>
+            </SectionHeading>
+          </div>
 
-        <motion.div
-          initial={{ opacity: 0, y: 40 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{
-            duration: 0.5,
-            ease: "easeOut",
-          }}
-          viewport={{ once: true, amount: 0.1 }}
-          className="flex flex-wrap p-4 justify-center gap-8 "
-        >
-          {projects.map((project, index) => (
-            <ProjectCard key={index} project={project} />
-          ))}
-        </motion.div>
+          <motion.div
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{
+              duration: 0.5,
+              ease: "easeOut",
+            }}
+            viewport={{ once: true, amount: 0.1 }}
+            className="flex flex-wrap w-full xl:mx-[5%] xl:px-[5%] gap-8 "
+          >
+            {projects.map((project, index) => (
+              <ProjectCard key={index} project={project} />
+            ))}
+          </motion.div>
+        </div>
       </motion.div>
     </div>
   );

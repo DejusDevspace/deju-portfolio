@@ -19,14 +19,20 @@ function App() {
       <div className="relative flex flex-col overflow-x-hidden z-0">
         <NavMain />
         <main className="relative z-10 flex-grow flex flex-col justify-center items-center">
-          <HeroMain />
-          <AboutMain />
+          <section id="home">
+            <HeroMain />
+          </section>
+          <section id="about">
+            <AboutMain />
+          </section>
           {/* <TerminalWindow /> */}
-          <ExperienceMain />
-          <div className="w-full">
+          {/* <ExperienceMain /> */}
+          <section id="projects">
             <ProjectMain />
+          </section>
+          <div id="contact">
+            <ContactMain />
           </div>
-          <ContactMain />
         </main>
       </div>
     </>

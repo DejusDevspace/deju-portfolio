@@ -10,7 +10,8 @@ const ProjectCard = ({ project }) => {
 
   return (
     <motion.div
-      className="rounded-2xl my-4 p-8 xl:max-w-[30%] shadow-xl bg-white/5 hover:shadow-lg hover:shadow-neonBlue transition-all duration-300"
+      className="rounded-2xl my-4 p-8 xl:max-w-[30%] shadow-xl bg-white/5 hover:shadow-lg hover:shadow-neonBlue
+      transition-all duration-300"
       whileHover={{ scale: 1.02 }}
     >
       <motion.div
@@ -20,10 +21,13 @@ const ProjectCard = ({ project }) => {
         transition={{ duration: 0.8, ease: "easeOut" }}
         viewport={{ once: true, amount: 0.2 }}
       >
-        <div className="text-4xl leading-none font-extrabold text-accent text-outline">
+        <div className="text-3xl leading-none font-extrabold text-accent text-outline">
           <BsFolderFill />
         </div>
-        <h2 className="font-bold leading-none text-xl xl:text-2xl text-primary group-hover:text-accent transition-all duration-500 capitalize">
+        <h2
+          className="font-bold leading-none text-xl xl:text-2xl text-primary group-hover:text-accent
+        transition-all duration-500 capitalize"
+        >
           {project.name}
         </h2>
         <p className="text-primary/50 text-sm xl:text-md">
