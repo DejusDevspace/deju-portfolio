@@ -31,9 +31,9 @@ const AboutMain = () => {
             </p>
             <p className="text-sm xl:text-lg text-primary/80">
               I am currently working on data science, machine learning and AI
-              projects, experimenting with AI models, getting obsessed agentic
-              workflows, training stubborn models, and occasionally yelling at
-              my terminal when things break (which they do...often).
+              projects, experimenting with AI models, getting obsessed with
+              agentic workflows, training stubborn models, and occasionally
+              yelling at my terminal when things break (which they do...often).
             </p>
           </motion.div>
           <motion.div
