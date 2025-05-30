@@ -1,3 +1,3 @@
-const navList = ["Home", "About", "Resume", "Contact"];
+const navList = ["Home", "About", "Projects", "Contact"];
 
 export default navList;

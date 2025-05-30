@@ -73,7 +73,7 @@ const MobileNav = ({ data }) => {
                   }}
                   className="hover:text-accent cursor-pointer capitalize"
                 >
-                  <a href="#">{link}</a>
+                  <a href={`#${link.toLowerCase()}`}>{link}</a>
                 </li>
               ))}
             </motion.ul>
