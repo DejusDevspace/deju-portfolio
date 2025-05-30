@@ -49,7 +49,7 @@ const AboutMain = () => {
             <ul className="list-disc pl-6 text-sm xl:text-lg text-primary/80">
               <li>staying up to date with tech advancements</li>
               <li>playing PC games (mostly just EA SPORTS FC)</li>
-              <li>watching 1 movie in 2 weeks</li>
+              <li>watching a movie for 2 weeks</li>
               <li>adding to my graveyard of half-finished side projects</li>
             </ul>
           </motion.div>
