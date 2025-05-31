@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import emailjs from "emailjs-com";
 import { toast } from "react-toastify";
+import { motion } from "framer-motion";
 import SectionHeading from "../layout/SectionHeading";
 import ContactBackgroundScene from "./ContactBackgroundScene";
 
@@ -87,77 +88,93 @@ const ContactMain = () => {
     <div className="relative min-h-[100vh] w-[100vw] overflow-hidden">
       <ContactBackgroundScene />
       <div className="relative z-10 container mx-auto flex flex-col items-center gap-4 py-12 xl:py-24 px-4">
-        <SectionHeading text="Contact">
-          <span className="text-accent">Me</span>
-        </SectionHeading>
-
-        <form
-          className="w-full max-w-2xl mt-12 bg-white/5 backdrop-blur-lg rounded-2xl border border-white/10 p-8 xl:shadow-[0_0_20px_5px_var(--color-neonBlue)] flex flex-col gap-6"
-          onSubmit={handleSubmit}
-        >
-          <div className="flex flex-col gap-2">
-            <h3 className="text-accent">Let's Connect!</h3>
-            <p className="text-sm uppercase text-primary/50">
-              I'm always open to discussing new projects, creative ideas, or
-              opportunities, feel free to reach out. I would love to hear from
-              you!
-            </p>
-          </div>
-
-          <div>
-            <label className="block text-sm uppercase tracking-widest text-[var(--color-neonBlue)] mb-2">
-              Name
-            </label>
-            <input
-              name="name"
-              type="text"
-              placeholder="Your name"
-              className="w-full px-4 py-3 bg-black/30 text-white border border-white/20 rounded-lg placeholder:text-white/50 focus:outline-none focus:ring-2 focus:ring-[var(--color-neonBlue)]"
-              value={formData.name}
-              onChange={handleInputChange}
-              required
-            />
-          </div>
-
-          <div>
-            <label className="block text-sm uppercase tracking-widest text-[var(--color-neonBlue)] mb-2">
-              Email
-            </label>
-            <input
-              name="email"
-              type="email"
-              placeholder="Your email address"
-              className="w-full px-4 py-3 bg-black/30 text-white border border-white/20 rounded-lg placeholder:text-white/50 focus:outline-none focus:ring-2 focus:ring-[var(--color-neonBlue)]"
-              value={formData.email}
-              onChange={handleInputChange}
-              required
-            />
-          </div>
-
-          <div>
-            <label className="block text-sm uppercase tracking-widest text-[var(--color-neonBlue)] mb-2">
-              Message
-            </label>
-            <textarea
-              name="message"
-              rows="5"
-              placeholder="Tell me something great..."
-              className="w-full px-4 py-3 bg-black/30 text-white border border-white/20 rounded-lg placeholder:text-white/50 focus:outline-none focus:ring-2 focus:ring-[var(--color-neonBlue)] resize-none"
-              value={formData.message}
-              onChange={handleInputChange}
-              required
-            ></textarea>
-          </div>
-
-          <button
-            type="submit"
-            disabled={status === "sending"}
-            className="self-start px-6 py-3 mt-4 bg-[var(--color-neonBlue)] text-black font-bold rounded-lg shadow-[var(--shadow-neon)] hover:scale-105 transition-all duration-300"
+        <div className="w-full xl:mx-[10%] xl:px-[10%]">
+          <motion.div
+            initial={{ opacity: 0, y: 60 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, ease: "easeIn" }}
+            viewport={{ once: true, amount: 0.1 }}
           >
-            {status === "sending" ? "Sending..." : "Send Message 🚀"}
-          </button>
+            <SectionHeading text="contact">
+              <span className="text-accent">me</span>
+            </SectionHeading>
+          </motion.div>
+          <motion.div
+            className="flex flex-col items-center justify-center mt-6"
+            initial={{ opacity: 0, y: 100 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.2, duration: 0.6, ease: "easeInOut" }}
+            viewport={{ once: true, amount: 0.2 }}
+          >
+            <form
+              className="w-full max-w-2xl mt-12 bg-white/5 backdrop-blur-lg rounded-2xl border border-white/10 p-8 xl:shadow-[0_0_20px_5px_var(--color-neonBlue)] flex flex-col gap-6"
+              onSubmit={handleSubmit}
+            >
+              <div className="flex flex-col gap-2">
+                <h3 className="text-accent">Let's Connect!</h3>
+                <p className="text-sm uppercase text-primary/50">
+                  I'm always open to discussing new projects, creative ideas, or
+                  opportunities, feel free to reach out. I would love to hear
+                  from you!
+                </p>
+              </div>
 
-          {/* {status === "success" && (
+              <div>
+                <label className="block text-sm uppercase tracking-widest text-[var(--color-neonBlue)] mb-2">
+                  Name
+                </label>
+                <input
+                  name="name"
+                  type="text"
+                  placeholder="Your name"
+                  className="w-full px-4 py-3 bg-black/30 text-white border border-white/20 rounded-lg placeholder:text-white/50 focus:outline-none focus:ring-2 focus:ring-[var(--color-neonBlue)]"
+                  value={formData.name}
+                  onChange={handleInputChange}
+                  required
+                />
+              </div>
+
+              <div>
+                <label className="block text-sm uppercase tracking-widest text-[var(--color-neonBlue)] mb-2">
+                  Email
+                </label>
+                <input
+                  name="email"
+                  type="email"
+                  placeholder="Your email address"
+                  className="w-full px-4 py-3 bg-black/30 text-white border border-white/20 rounded-lg placeholder:text-white/50 focus:outline-none focus:ring-2 focus:ring-[var(--color-neonBlue)]"
+                  value={formData.email}
+                  onChange={handleInputChange}
+                  required
+                />
+              </div>
+
+              <div>
+                <label className="block text-sm uppercase tracking-widest text-[var(--color-neonBlue)] mb-2">
+                  Message
+                </label>
+                <textarea
+                  name="message"
+                  rows="5"
+                  placeholder="Tell me something great..."
+                  className="w-full px-4 py-3 bg-black/30 text-white border border-white/20 rounded-lg
+              placeholder:text-white/50 focus:outline-none focus:ring-2 focus:ring-[var(--color-neonBlue)] resize-none"
+                  value={formData.message}
+                  onChange={handleInputChange}
+                  required
+                ></textarea>
+              </div>
+
+              <button
+                type="submit"
+                disabled={status === "sending"}
+                className="self-start px-6 py-3 mt-4 bg-[var(--color-neonBlue)] text-black font-bold rounded-lg
+            shadow-[var(--shadow-neon)] hover:scale-105 transition-all duration-300"
+              >
+                {status === "sending" ? "Sending..." : "Send Message 🚀"}
+              </button>
+
+              {/* {status === "success" && (
             <p className="text-green-400 text-sm xl:text-md mt-2">
               Thanks for reaching out! I'll get back to you soon. ✅
             </p>
@@ -167,7 +184,9 @@ const ContactMain = () => {
               Something went wrong. Please try again. ❌
             </p>
           )} */}
-        </form>
+            </form>
+          </motion.div>
+        </div>
       </div>
     </div>
   );
