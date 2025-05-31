@@ -1,8 +1,7 @@
 import React, { useEffect, useState } from "react";
-import SectionHeading from "../layout/SectionHeading";
 import DownloadCVButton from "../common/DownloadCVButton";
-import HeroBackgroundScene from "./HeroBackgroundScene";
 import { motion } from "framer-motion";
+import LottieAnimation from "./LottieAnimation";
 
 const HeroMain = () => {
   const fullText = "Hi, I'm Deju.";
@@ -20,15 +19,15 @@ const HeroMain = () => {
   }, [index]);
 
   return (
-    <div className="relative flex items-center justify-center min-h-screen w-full">
-      {/* <HeroBackgroundScene /> */}
+    <div className="relative flex items-center justify-center min-h-[95vh] w-full">
       <motion.div
-        className="relative flex flex-col text-center items-center justify-center text-white"
+        className="relative flex flex-col text-center items-center justify-center text-primary"
         initial={{ opacity: 0, y: 80 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5, ease: "easeIn" }}
         viewport={{ once: true, amount: 0.1 }}
       >
+        <LottieAnimation />
         <h1 className="text-3xl xl:text-5xl">
           {displayedText}
           <span className="text-accent animate-blink">|</span>
