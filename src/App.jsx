@@ -7,6 +7,7 @@ import {
   ContactMain,
   ExperienceMain,
 } from "./components";
+import Footer from "./components/layout/Footer";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
@@ -41,6 +42,7 @@ function App() {
           <div id="contact">
             <ContactMain />
           </div>
+          <Footer />
         </main>
       </div>
     </>
