@@ -22,7 +22,11 @@ const NavMain = () => {
           />
         </div>
         <div className="lg:hidden">
-          <MobileNav data={navList} />
+          <MobileNav
+            data={navList}
+            active={isSelected}
+            onClick={handleSelect}
+          />
         </div>
       </div>
     </header>

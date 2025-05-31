@@ -12,16 +12,17 @@ const SocialIcon = ({ icon: Icon, link }) => {
       href={link}
       target="_blank"
       rel="noopener noreferrer"
-      className="hover:text-accent/70 transition-all duration-300"
+      className="hover:text-accent transition-all duration-300"
     >
       <Icon className="text-[20px]" />
     </a>
   );
 };
 
-const MobileNav = ({ data }) => {
+const MobileNav = ({ data, active, onClick }) => {
   const [isOpen, setIsOpen] = useState(false);
   const navList = data;
+  console.log(active);
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
@@ -51,7 +52,7 @@ const MobileNav = ({ data }) => {
         ))}
       </div>
 
-      <div className="fixed bottom-0 right-0 p-4 m-4 z-20 rounded-full bg-gray-800">
+      <div className="fixed bottom-0 right-0 p-4 m-4 z-20 rounded-xl bg-secondary shadow-xl">
         <CiMenuFries
           className="text-[32px] cursor-pointer"
           onClick={toggleMenu}
@@ -62,7 +63,7 @@ const MobileNav = ({ data }) => {
               initial={{ opacity: 0, y: -10 }}
               animate={{ opacity: 1, y: -250 }}
               exit={{ opacity: 0, y: -10 }}
-              className="absolute right-0 mt-4 bg-gray-800 rounded-lg shadow-lg
+              className="absolute right-0 mt-4 bg-secondary rounded-lg shadow-xl
             py-4 px-6 flex flex-col gap-4 z-20"
             >
               {navList.map((link, index) => (
@@ -70,10 +71,18 @@ const MobileNav = ({ data }) => {
                   key={index}
                   onClick={() => {
                     toggleMenu();
+                    onClick(index);
                   }}
-                  className="hover:text-accent cursor-pointer capitalize"
+                  className="hover:text-accent  cursor-pointer capitalize"
                 >
-                  <a href={`#${link.toLowerCase()}`}>{link}</a>
+                  <a
+                    href={`#${link.toLowerCase()}`}
+                    className={`${
+                      active === index ? "text-accent" : "text-primary"
+                    }`}
+                  >
+                    {link}
+                  </a>
                 </li>
               ))}
             </motion.ul>
