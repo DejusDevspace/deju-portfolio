@@ -53,7 +53,6 @@ const NavMain = () => {
           className="text-xl xl:text-2xl font-bold"
           initial={{ opacity: 0, x: -100 }}
           animate={{ opacity: 1, x: 0 }}
-          exit={{ opacity: 0, x: -100 }}
           transition={{ duration: 0.6, ease: "easeInOut" }}
           viewport={{ once: true }}
         >
