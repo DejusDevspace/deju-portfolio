@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { motion } from "framer-motion";
 import DesktopNav from "./DesktopNav";
 import MobileNav from "./MobileNav";
 import navList from "./navList";
@@ -48,7 +49,16 @@ const NavMain = () => {
   return (
     <header className="fixed w-full py-4 z-20 bg-background">
       <div className="container mx-auto flex justify-between items-center px-6 xl:px-4">
-        <h1 className="text-xl xl:text-2xl font-bold">Deju</h1>
+        <motion.h1
+          className="text-xl xl:text-2xl font-bold"
+          initial={{ opacity: 0, x: -100 }}
+          animate={{ opacity: 1, x: 0 }}
+          exit={{ opacity: 0, x: -100 }}
+          transition={{ duration: 0.6, ease: "easeInOut" }}
+          viewport={{ once: true }}
+        >
+          Deju
+        </motion.h1>
         <div className="hidden lg:flex">
           <DesktopNav
             data={navList}

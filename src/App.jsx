@@ -32,9 +32,9 @@ function App() {
           <section id="about">
             <AboutMain />
           </section>
-          <section id="experience">
+          {/* <section id="experience">
             <ExperienceMain />
-          </section>
+          </section> */}
           <section id="projects">
             <ProjectMain />
           </section>
