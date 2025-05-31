@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import SectionHeading from "../layout/SectionHeading";
 import DownloadCVButton from "../common/DownloadCVButton";
 import HeroBackgroundScene from "./HeroBackgroundScene";
+import { motion } from "framer-motion";
 
 const HeroMain = () => {
   const fullText = "Hi, I'm Deju.";
@@ -21,7 +22,13 @@ const HeroMain = () => {
   return (
     <div className="relative flex items-center justify-center min-h-screen w-full">
       {/* <HeroBackgroundScene /> */}
-      <div className="relative flex flex-col text-center items-center justify-center text-white">
+      <motion.div
+        className="relative flex flex-col text-center items-center justify-center text-white"
+        initial={{ opacity: 0, y: 80 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5, ease: "easeIn" }}
+        viewport={{ once: true, amount: 0.1 }}
+      >
         <h1 className="text-3xl xl:text-5xl">
           {displayedText}
           <span className="text-accent animate-blink">|</span>
@@ -29,8 +36,15 @@ const HeroMain = () => {
         <p className="text-sm xl:text-lg max-w-[500px] px-2 xl:max-w-[800px] my-4 text-primary/80">
           Just a curious human who turns ☕ + 💻 into fun and useful projects...
         </p>
-        <DownloadCVButton />
-      </div>
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.5, duration: 1, ease: "easeInOut" }}
+          viewport={{ once: true }}
+        >
+          <DownloadCVButton />
+        </motion.div>
+      </motion.div>
     </div>
   );
 };
