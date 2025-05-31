@@ -9,7 +9,7 @@ const DesktopNav = ({ data, active, onClick }) => {
             href={`#${item.toLowerCase()}`}
             className={`${
               active === index ? "text-accent" : "text-primary"
-            } hover:text-accent/70 transition-all duration-300`}
+            } capitalize hover:text-accent/70 transition-all duration-300`}
           >
             {item}
           </a>

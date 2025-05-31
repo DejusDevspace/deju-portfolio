@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import DesktopNav from "./DesktopNav";
 import MobileNav from "./MobileNav";
 import navList from "./navList";
@@ -9,6 +9,41 @@ const NavMain = () => {
   const handleSelect = (id) => {
     setSelected(id);
   };
+
+  useEffect(() => {
+    const sectionIds = navList.map((item) => item.toLowerCase());
+    const sections = sectionIds.map((id) => document.getElementById(id));
+
+    const observerOptions = {
+      root: null,
+      rootMargin: "0px",
+      threshold: 0.6,
+    };
+
+    const observerCallback = (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          const index = sectionIds.indexOf(entry.target.id);
+          setSelected(index);
+        }
+      });
+    };
+
+    const observer = new IntersectionObserver(
+      observerCallback,
+      observerOptions
+    );
+
+    sections.forEach((section) => {
+      if (section) observer.observe(section);
+    });
+
+    return () => {
+      sections.forEach((section) => {
+        if (section) observer.unobserve(section);
+      });
+    };
+  }, []);
 
   return (
     <header className="fixed w-full py-4 z-20 bg-background">
