@@ -7,15 +7,22 @@ import {
   ContactMain,
   ExperienceMain,
 } from "./components";
-import LoadingScreen from "./components/layout/LoadingScreen";
-import TerminalWindow from "./components/aboutSection/TerminalWindow";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 function App() {
-  const [isLoaded, setIsLoaded] = useState(false);
+  // const [isLoaded, setIsLoaded] = useState(false);
   return (
     <>
       {/* {!isLoaded && <LoadingScreen onComplete={() => setIsLoaded(true)} />} */}
-
+      <ToastContainer
+        position="top-right"
+        autoClose={3000}
+        theme="dark"
+        toastClassName="rounded-lg shadow-md"
+        bodyClassName="text-sm"
+        hideProgressBar={false}
+      />
       <div className="relative flex flex-col overflow-x-hidden z-0">
         <NavMain />
         <main className="relative z-10 flex-grow flex flex-col justify-center items-center">
@@ -25,8 +32,9 @@ function App() {
           <section id="about">
             <AboutMain />
           </section>
-          {/* <TerminalWindow /> */}
-          {/* <ExperienceMain /> */}
+          <section id="experience">
+            <ExperienceMain />
+          </section>
           <section id="projects">
             <ProjectMain />
           </section>
