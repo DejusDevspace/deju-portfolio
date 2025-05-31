@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import { CiMenuFries } from "react-icons/ci";
 import { motion, AnimatePresence } from "framer-motion";
 import { TbBrandLinkedinFilled } from "react-icons/tb";
@@ -22,11 +22,29 @@ const SocialIcon = ({ icon: Icon, link }) => {
 const MobileNav = ({ data, active, onClick }) => {
   const [isOpen, setIsOpen] = useState(false);
   const navList = data;
-  console.log(active);
+  const menuRef = useRef();
 
   const toggleMenu = () => {
-    setIsOpen(!isOpen);
+    setIsOpen((prev) => !prev);
   };
+
+  const handleOutsideClick = (e) => {
+    if (menuRef.current && !menuRef.current.contains(e.target)) {
+      setIsOpen(false);
+    }
+  };
+
+  useEffect(() => {
+    if (isOpen) {
+      document.addEventListener("mousedown", handleOutsideClick);
+    } else {
+      document.removeEventListener("mousedown", handleOutsideClick);
+    }
+
+    return () => {
+      document.removeEventListener("mousedown", handleOutsideClick);
+    };
+  }, [isOpen]);
 
   const socialLinks = [
     {
@@ -45,6 +63,7 @@ const MobileNav = ({ data, active, onClick }) => {
       exit={{ opacity: 0, x: 100 }}
       transition={{ duration: 0.6 }}
       className="relative"
+      ref={menuRef}
     >
       <div className="flex gap-4">
         {socialLinks.map((social, index) => (
@@ -73,13 +92,12 @@ const MobileNav = ({ data, active, onClick }) => {
                     toggleMenu();
                     onClick(index);
                   }}
-                  className="hover:text-accent  cursor-pointer capitalize"
                 >
                   <a
                     href={`#${link.toLowerCase()}`}
                     className={`${
                       active === index ? "text-accent" : "text-primary"
-                    }`}
+                    } hover:text-accent/70 cursor-pointer capitalize`}
                   >
                     {link}
                   </a>
