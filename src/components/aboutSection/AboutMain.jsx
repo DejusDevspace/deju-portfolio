@@ -63,8 +63,10 @@ const AboutMain = () => {
             <p className="font-bold text-accent">
               // Tools I enjoy working with:
             </p>
-            {/* <ToolSpan />
-            <ToolsSpan animateInverse={true} /> */}
+            <div className="">
+              {/* <ToolSpan />
+              <ToolSpan animateInverse={true} /> */}
+            </div>
           </motion.div>
         </div>
       </motion.div>

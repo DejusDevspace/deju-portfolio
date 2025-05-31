@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 const ToolsSpan = ({ animateInverse }) => {
   return (
     <motion.div
-      className="overflow-hidden py-2 cursor-pointer"
+      className="relative overflow-hidden py-2 cursor-pointer"
       initial={{ opacity: 0, y: 50 }}
       whileInView={{ opacity: 1, y: 0 }}
       transition={{
@@ -15,7 +15,7 @@ const ToolsSpan = ({ animateInverse }) => {
       }}
       viewport={{ once: true }}
     >
-      <div className="flex whitespace-nowrap overflow-hidden">
+      <div className="relative flex whitespace-nowrap overflow-hidden">
         <div
           className={`flex gap-12 ${
             animateInverse ? "animate-inverse-marquee" : "animate-marquee"
@@ -25,9 +25,9 @@ const ToolsSpan = ({ animateInverse }) => {
             <div
               key={`first-${index}`}
               className="flex items-center gap-2 hover:text-neonBlue transition-all duration-300
-              text-xl font-semibold uppercase hover:drop-shadow-[0_0_6px_#00ffff]"
+              text-md xl:text-xl font-semibold uppercase hover:drop-shadow-[0_0_6px_#00ffff]"
             >
-              <span className="text-xl">
+              <span className="text-md xl:text-xl">
                 <tool.icon />
               </span>
               <p>{tool.name}</p>
@@ -43,9 +43,9 @@ const ToolsSpan = ({ animateInverse }) => {
             <div
               key={`second-${index}`}
               className="flex items-center gap-2 hover:text-neonBlue transition-all duration-300
-              text-xl font-semibold uppercase hover:drop-shadow-[0_0_6px_#00ffff]"
+              text-md xl:text-xl font-semibold uppercase hover:drop-shadow-[0_0_6px_#00ffff]"
             >
-              <span className="text-xl">
+              <span className="text-md xl:text-xl">
                 <tool.icon />
               </span>
               <p>{tool.name}</p>
