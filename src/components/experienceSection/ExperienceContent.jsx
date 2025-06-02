@@ -55,7 +55,7 @@ const ExperienceContent = () => {
       {/* </p> */}
 
       {/* Experience Cards */}
-      <div className="flex flex-col xl:flex-row flex-wrap gap-6 justify-center text-center xl:text-start">
+      <div className="flex flex-col xl:flex-row flex-wrap gap-6 text-center xl:text-start">
         {data.map((item, index) => (
           <motion.div
             key={index}
@@ -63,7 +63,7 @@ const ExperienceContent = () => {
             whileInView={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.6, delay: index * 0.2 }}
             viewport={{ once: true }}
-            className="relative bg-secondary p-6 rounded-xl shadow-md hover:shadow-accent transition-shadow duration-300 xl:w-[410px]"
+            className="relative bg-secondary p-6 rounded-xl shadow-md hover:shadow-accent transition-shadow duration-300 xl:max-w-[32%]"
           >
             <p className="text-accent text-sm mb-2">{item.period}</p>
             <h3 className="text-xl font-semibold text-white mb-2">
