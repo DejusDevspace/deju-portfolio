@@ -5,19 +5,7 @@ import { TbBrandLinkedinFilled } from "react-icons/tb";
 import { RiTwitterXFill } from "react-icons/ri";
 import { FaGithub } from "react-icons/fa";
 import { MdOutgoingMail } from "react-icons/md";
-
-const SocialIcon = ({ icon: Icon, link }) => {
-  return (
-    <a
-      href={link}
-      target="_blank"
-      rel="noopener noreferrer"
-      className="hover:text-accent transition-all duration-300"
-    >
-      <Icon className="text-[20px]" />
-    </a>
-  );
-};
+import SocialIcon from "../common/SocialIcon";
 
 const MobileNav = ({ data, active, onClick }) => {
   const [isOpen, setIsOpen] = useState(false);
