@@ -1,6 +1,6 @@
 import React from "react";
 
-const SocialIcon = ({ icon: Icon, link }) => {
+const SocialIcon = ({ icon: Icon, link, className }) => {
   return (
     <a
       href={link}
@@ -8,7 +8,7 @@ const SocialIcon = ({ icon: Icon, link }) => {
       rel="noopener noreferrer"
       className="hover:text-accent transition-all duration-300"
     >
-      <Icon className="text-[20px]" />
+      <Icon className={className ? className : "text-[20px]"} />
     </a>
   );
 };
