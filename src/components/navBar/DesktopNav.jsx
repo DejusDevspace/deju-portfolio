@@ -1,7 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 
-const DesktopNav = ({ data, active, onClick }) => {
+const DesktopNav = ({ navList, socialList, active, onClick }) => {
   return (
     <motion.div
       className="hidden lg:flex items-center justify-center w-full"
@@ -12,7 +12,7 @@ const DesktopNav = ({ data, active, onClick }) => {
       viewport={{ once: true }}
     >
       <nav className="flex gap-8 list-none">
-        {data.map((item, index) => (
+        {navList.map((item, index) => (
           <li key={index} onClick={() => onClick(index)}>
             <a
               href={`#${item.toLowerCase()}`}

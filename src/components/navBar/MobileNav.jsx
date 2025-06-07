@@ -1,15 +1,10 @@
 import React, { useState, useRef, useEffect } from "react";
 import { CiMenuFries } from "react-icons/ci";
 import { motion, AnimatePresence } from "framer-motion";
-import { TbBrandLinkedinFilled } from "react-icons/tb";
-import { RiTwitterXFill } from "react-icons/ri";
-import { FaGithub } from "react-icons/fa";
-import { MdOutgoingMail } from "react-icons/md";
 import SocialIcon from "../common/SocialIcon";
 
-const MobileNav = ({ data, active, onClick }) => {
+const MobileNav = ({ navList, socialList, active, onClick }) => {
   const [isOpen, setIsOpen] = useState(false);
-  const navList = data;
   const menuRef = useRef();
 
   const toggleMenu = () => {
@@ -34,16 +29,6 @@ const MobileNav = ({ data, active, onClick }) => {
     };
   }, [isOpen]);
 
-  const socialLinks = [
-    {
-      icon: TbBrandLinkedinFilled,
-      link: "https://www.linkedin.com/in/deju-adejo/",
-    },
-    { icon: FaGithub, link: "https://github.com/DejusDevspace" },
-    { icon: RiTwitterXFill, link: "https://x.com/adejo_deju" },
-    { icon: MdOutgoingMail, link: "mailto:ojomideju2003@gmail.com" },
-  ];
-
   return (
     <motion.div
       initial={{ opacity: 0, x: 100 }}
@@ -53,7 +38,7 @@ const MobileNav = ({ data, active, onClick }) => {
       ref={menuRef}
     >
       <div className="flex gap-4">
-        {socialLinks.map((social, index) => (
+        {socialList.map((social, index) => (
           <SocialIcon key={index} icon={social.icon} link={social.link} />
         ))}
       </div>

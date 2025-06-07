@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import DesktopNav from "./DesktopNav";
 import MobileNav from "./MobileNav";
-import navList from "./navList";
+import { navList, socialLinks } from "./navData";
 
 const NavMain = () => {
   const [isSelected, setSelected] = useState(0);
@@ -60,14 +60,16 @@ const NavMain = () => {
         </motion.h1>
         <div className="hidden lg:flex">
           <DesktopNav
-            data={navList}
+            navList={navList}
+            socialList={socialLinks}
             active={isSelected}
             onClick={handleSelect}
           />
         </div>
         <div className="lg:hidden">
           <MobileNav
-            data={navList}
+            navList={navList}
+            socialList={socialLinks}
             active={isSelected}
             onClick={handleSelect}
           />
