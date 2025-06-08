@@ -54,7 +54,7 @@ const MobileNav = ({ navList, socialList, active, onClick }) => {
               initial={{ opacity: 0, y: -10 }}
               animate={{ opacity: 1, y: -250 }}
               exit={{ opacity: 0, y: -10 }}
-              className="absolute right-0 mt-4 bg-secondary rounded-lg shadow-xl
+              className="absolute right-0 -mt-6 bg-secondary rounded-lg shadow-xl
             py-4 px-6 flex flex-col gap-4 z-20"
             >
               {navList.map((link, index) => (
