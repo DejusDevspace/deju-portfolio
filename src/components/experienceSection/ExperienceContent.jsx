@@ -75,7 +75,7 @@ const ExperienceContent = () => {
               <div className="flex items-center gap-2 text-white font-medium">
                 <span className="text-accent text-xl">●</span>
                 {item.company}
-                <span className="text-sm xl:hidden bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 text-transparent bg-clip-text">
+                <span className="text-sm xl:hidden bg-accent/70 text-transparent bg-clip-text">
                   | {item.locationType}
                 </span>
               </div>
