@@ -55,7 +55,7 @@ const ExperienceContent = () => {
       {/* </p> */}
 
       {/* Experience Cards */}
-      <div className="flex flex-col xl:flex-row flex-wrap gap-6 text-center xl:text-start">
+      <div className="flex flex-col xl:flex-row flex-wrap gap-6 text-start">
         {data.map((item, index) => (
           <motion.div
             key={index}
@@ -71,7 +71,7 @@ const ExperienceContent = () => {
             </h3>
             <p className="text-white/80 text-sm mb-4">{item.description}</p>
 
-            <div className="flex justify-center xl:justify-start mt-6">
+            <div className="flex justify-start mt-6">
               <div className="flex items-center gap-2 text-white font-medium">
                 <span className="text-accent text-xl">●</span>
                 {item.company}
