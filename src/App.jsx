@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Analytics } from "@vercel/analytics/react";
 import {
   NavMain,
   HeroMain,
@@ -44,6 +45,7 @@ function App() {
           </div>
           <Footer />
         </main>
+        <Analytics />
       </div>
     </>
   );
