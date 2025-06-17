@@ -5,6 +5,11 @@ import LottieAnimation from "./LottieAnimation";
 
 const HeroMain = () => {
   const fullText = "Hi, I'm Deju.";
+  const texts = [
+    "Hi, I'm Deju",
+    "I'm a Data Scientist",
+    "I'm a Machine Learning Engineer",
+  ];
   // TODO: work on changing the displayedText at intervals (not only name)
   // e.g...roles: I'm a Data Scientist, I'm a machine learning engineer,
   // I'm an AI engineeer...blah blah
