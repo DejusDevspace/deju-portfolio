@@ -25,7 +25,8 @@ const AboutMain = () => {
             viewport={{ once: true, amount: 0.1 }}
           >
             <p className="text-sm xl:text-lg text-primary/80">
-              I'm a Jack of a few a trades and currently a part-time student at{" "}
+              I'm a Jack of a few a trades and a Mechatronics Engineering
+              graduate from{" "}
               <span className="text-accent font-bold">Bowen University</span>,
               Nigeria.
             </p>
