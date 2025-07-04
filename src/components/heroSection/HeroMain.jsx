@@ -1,5 +1,3 @@
-// File: HeroMain.jsx
-
 import React, { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import DownloadCVButton from "../common/DownloadCVButton";
