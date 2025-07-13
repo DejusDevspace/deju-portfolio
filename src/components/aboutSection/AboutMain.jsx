@@ -1,6 +1,7 @@
 import React from "react";
 import SectionHeading from "../layout/SectionHeading";
 import ToolSpan from "./ToolSpan";
+import MyTools from "./MyTools";
 import { motion } from "framer-motion";
 
 const AboutMain = () => {
@@ -65,8 +66,8 @@ const AboutMain = () => {
               // Tools I enjoy working with:
             </p>
             <div className="">
-              {/* <ToolSpan />
-              <ToolSpan animateInverse={true} /> */}
+              <MyTools />
+              {/* <ToolSpan animateInverse={true} /> */}
             </div>
           </motion.div>
         </div>
