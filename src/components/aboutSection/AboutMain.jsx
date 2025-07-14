@@ -65,9 +65,13 @@ const AboutMain = () => {
             <p className="font-bold text-accent">
               // Tools I enjoy working with:
             </p>
-            <div className="">
-              <MyTools />
-              {/* <ToolSpan animateInverse={true} /> */}
+            <div className="flex flex-col">
+              <div>
+                <MyTools />
+              </div>
+              <div className="hidden md:block">
+                <MyTools animateInverse={true} />
+              </div>
             </div>
           </motion.div>
         </div>

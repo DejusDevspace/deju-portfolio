@@ -3,7 +3,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import { tools } from "./sectionData";
 
-const MyTools = () => {
+const MyTools = ({ animateInverse }) => {
   return (
     <div className="w-full">
       <motion.div
@@ -13,7 +13,11 @@ const MyTools = () => {
         transition={{ duration: 0.5, ease: "easeOut" }}
         viewport={{ once: true }}
       >
-        <div className="flex whitespace-nowrap w-max animate-marquee gap-8">
+        <div
+          className={`flex whitespace-nowrap w-max ${
+            animateInverse ? "animate-inverse-marquee" : "animate-marquee"
+          } gap-8`}
+        >
           {tools.concat(tools).map((tool, idx) => (
             <div
               key={idx}
