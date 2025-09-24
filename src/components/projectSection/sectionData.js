@@ -1,6 +1,17 @@
-import electionImg from "../../assets/projects/election-app.png";
-import learningAssistantImg from "../../assets/projects/learning-assistant.png";
-import beanClassificationImg from "../../assets/projects/bean-classification.png";
+// Learning assistant project
+import learningAssistantStreamlit from "../../assets/projects/learning-assistant/learning-assistant.png";
+import learningAssistantLangSmith1 from "../../assets/projects/learning-assistant/langsmith1.png";
+import learningAssistantLangSmith2 from "../../assets/projects/learning-assistant/langsmith2.png";
+// Beans classification project
+import beanClassificationImg from "../../assets/projects/bean-classification/bean-classification.png";
+import beanTrainingCurves from "../../assets/projects/bean-classification/training-curves.png";
+import beanConfusionMatrix from "../../assets/projects/bean-classification/confusion-matrix.png";
+// BAES elections website
+import electionLandingPg from "../../assets/projects/baeselections/election-app.png";
+import electionLoginPg from "../../assets/projects/baeselections/login.png";
+import electionVoting from "../../assets/projects/baeselections/voting.png";
+import electionLivePoll from "../../assets/projects/baeselections/live-poll.png";
+import electionEnd from "../../assets/projects/baeselections/election-end.png";
 
 const projects = [
   {
@@ -13,6 +24,7 @@ const projects = [
     stack: [
       { name: "Python" },
       { name: "LangChain" },
+      { name: "LangSmith" },
       { name: "Streamlit" },
       { name: "Groq LLM API" },
     ],
@@ -21,8 +33,12 @@ const projects = [
       github:
         "https://github.com/DejusDevspace/Personal-Leaning-Assistant-Q-A-Conversational-Chatbot",
     },
-    image: learningAssistantImg,
-    docImages: [learningAssistantImg, electionImg, beanClassificationImg],
+    image: learningAssistantStreamlit,
+    docImages: [
+      learningAssistantStreamlit,
+      learningAssistantLangSmith1,
+      learningAssistantLangSmith2,
+    ],
   },
   {
     id: 1,
@@ -35,6 +51,7 @@ const projects = [
       { name: "Python" },
       { name: "TensorFlow" },
       { name: "Keras" },
+      { name: "Flask" },
       { name: "Numpy" },
     ],
     links: {
@@ -42,52 +59,60 @@ const projects = [
       github: "https://github.com/DejusDevspace/bean-disease-classification",
     },
     image: beanClassificationImg,
-    docImages: [beanClassificationImg, learningAssistantImg, electionImg],
+    docImages: [beanClassificationImg, beanTrainingCurves, beanConfusionMatrix],
   },
   {
-    id: 4,
-    num: "05",
-    name: "Executive Election App",
+    id: 2,
+    num: "03",
+    name: "BAES Election Website",
     category: "Full Stack",
     description:
-      "Built an improved version of the election web app for a larger election process across my college.",
+      "Built a web application for the 2025/2026 executives election process across the engineering departments in BAES (Bowen Association of Engineering Students). Created a simple UI and provided a live poll for voting results. Secure authentication for a free and fair election process.",
     stack: [
       { name: "React.js" },
       { name: "Node.js" },
       { name: "Express.js" },
       { name: "PostgreSQL" },
+      { name: "Supabase" },
       { name: "Render" },
     ],
     links: {
       live: "https://baeselections.vercel.app/",
       github: "https://github.com/DejusDevspace/baes-election-website",
     },
-    image: electionImg,
-  },
-  {
-    id: 2,
-    num: "03",
-    name: "Election Web App",
-    category: "Full Stack",
-    description:
-      "Built a simple and secure election platform for student voting in my college. Enabled students to vote online with an intuitive UI which included live voting poll, and backend validation to ensure election integrity.",
-    stack: [
-      { name: "Python" },
-      { name: "Flask" },
-      { name: "JavaScript" },
-      { name: "Supabase" },
-      { name: "Vercel" },
+    image: electionLandingPg,
+    docImages: [
+      electionLandingPg,
+      electionLoginPg,
+      electionLivePoll,
+      electionVoting,
+      electionEnd,
     ],
-    links: {
-      live: "https://baes-senate-election.vercel.app/",
-      github: "https://github.com/DejusDevspace/baes-senate-election",
-    },
-    image: electionImg,
   },
+  // {
+  //   id: 2,
+  //   num: "03",
+  //   name: "BAES Senate Elections",
+  //   category: "Full Stack",
+  //   description:
+  //     "Built a simple and secure election platform for student voting in my college. Enabled students to vote online with an intuitive UI which included live voting poll, and backend validation to ensure election integrity.",
+  //   stack: [
+  //     { name: "Python" },
+  //     { name: "Flask" },
+  //     { name: "JavaScript" },
+  //     { name: "Supabase" },
+  //     { name: "Vercel" },
+  //   ],
+  //   links: {
+  //     live: "https://baes-senate-election.vercel.app/",
+  //     github: "https://github.com/DejusDevspace/baes-senate-election",
+  //   },
+  //   image: electionLandingPg,
+  // },
   {
     id: 3,
     num: "04",
-    name: "CV Summarizer App",
+    name: "CV Summarizer RAG App",
     category: "Generative AI",
     description:
       "Created an application that takes a CV document and generates a concise summary using LLMs. Utilized RAG pipeline and Streamlit UI for easy interaction.",
@@ -101,7 +126,7 @@ const projects = [
       live: "#",
       github: "https://github.com/DejusDevspace/CV-upload-CV-summarize-RAG-app",
     },
-    image: learningAssistantImg,
+    image: learningAssistantStreamlit,
   },
 ];
 
