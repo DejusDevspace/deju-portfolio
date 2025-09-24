@@ -76,14 +76,14 @@ const ProjectCard = ({ project }) => {
               <GoArrowUpRight className="text-2xl group-hover:text-accent" />
             </a> */}
             <button
-              className="px-6 py-2 bg-accent/15 text-primary shadow-md hover:scale-105 rounded-xl
-            transition-all duration-300"
+              className="px-6 py-2 bg-accent/10 text-primary shadow-md hover:scale-105 rounded-xl
+            cursor-pointer transition-all duration-300"
             >
               More Info
             </button>
           </div>
           <div
-            className="flex justify-center items-center group w-[40px] h-[40px] bg-accent/15
+            className="flex justify-center items-center group w-[40px] h-[40px] bg-accent/10
           rounded-full cursor-pointer hover:scale-115 transition-all duration-300"
           >
             <a

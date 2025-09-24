@@ -1,6 +1,5 @@
 import React from "react";
 import SectionHeading from "../layout/SectionHeading";
-import ToolSpan from "./ToolSpan";
 import MyTools from "./MyTools";
 import { motion } from "framer-motion";
 
