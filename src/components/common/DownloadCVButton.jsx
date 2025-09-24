@@ -5,7 +5,7 @@ const DownloadCVButton = ({ children }) => {
   return (
     <div className="flex flex-col xl:flex-row items-center gap-8 mt-4">
       <a
-        href="/Deju_Adejo_CV.pdf"
+        href="/Ojomideju_Adejo_CV.pdf"
         download
         className="flex items-center gap-2 bg-black text-cyan-400 px-6 py-3 rounded-lg cursor-pointer
               shadow-[0_0_15px_#00FFFF] hover:scale-105 transition-all duration-300"
