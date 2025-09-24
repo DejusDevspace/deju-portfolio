@@ -22,6 +22,7 @@ const projects = [
         "https://github.com/DejusDevspace/Personal-Leaning-Assistant-Q-A-Conversational-Chatbot",
     },
     image: learningAssistantImg,
+    docImages: [learningAssistantImg, electionImg, beanClassificationImg],
   },
   {
     id: 1,
@@ -41,6 +42,7 @@ const projects = [
       github: "https://github.com/DejusDevspace/bean-disease-classification",
     },
     image: beanClassificationImg,
+    docImages: [beanClassificationImg, learningAssistantImg, electionImg],
   },
   {
     id: 4,
