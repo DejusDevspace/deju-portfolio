@@ -21,9 +21,29 @@ const ProjectCard = ({ project }) => {
         transition={{ duration: 0.8, ease: "easeOut" }}
         viewport={{ once: true, amount: 0.2 }}
       >
-        <div className="text-3xl leading-none font-extrabold text-accent text-outline">
+        <motion.div
+          className="w-full"
+          initial={{ opacity: 0, x: textSlideFrom }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
+          viewport={{ once: true, amount: 0.2 }}
+        >
+          <div
+            className="relative group flex justify-center items-center bg-accent/10 rounded-lg shadow-md hover:shadow-accent transition-all duration-300
+                        xl:h-[204px] h-auto overflow-hidden"
+          >
+            <img
+              src={project.image}
+              alt={project.name}
+              className="object-cover object-center w-full h-full rounded-lg z-10"
+              loading="lazy"
+            />
+          </div>
+        </motion.div>
+
+        {/* <div className="text-3xl leading-none font-extrabold text-accent text-outline">
           <BsFolderFill />
-        </div>
+        </div> */}
         <h2
           className="font-bold leading-none text-xl xl:text-2xl text-primary group-hover:text-accent
         transition-all duration-500 capitalize"
@@ -31,7 +51,9 @@ const ProjectCard = ({ project }) => {
           {project.name}
         </h2>
         <p className="text-primary/50 text-sm xl:text-md">
-          {project.description}
+          {project.description.length > 150
+            ? project.description.slice(0, 95) + "..."
+            : project.description}
         </p>
         <ul className="flex gap-1.5 flex-wrap">
           {project.stack.map((item, index) => (
@@ -45,14 +67,20 @@ const ProjectCard = ({ project }) => {
         <div className="border border-primary/20" />
 
         <div className="flex gap-4">
-          <div className="flex justify-center items-center group w-[40px] h-[40px] bg-secondary rounded-full cursor-pointer">
-            <a
+          <div className="flex justify-center items-center group bg-secondary rounded-full cursor-pointer">
+            {/* <a
               href={project.links.live}
               target="_blank"
               rel="noopener noreferrer"
             >
               <GoArrowUpRight className="text-2xl group-hover:text-accent" />
-            </a>
+            </a> */}
+            <button
+              className="px-6 py-2 bg-primary text-secondary shadow-md hover:scale-105 rounded-xl
+            transition-all duration-300"
+            >
+              More Info
+            </button>
           </div>
           <div className="flex justify-center items-center group w-[40px] h-[40px] bg-secondary rounded-full cursor-pointer">
             <a

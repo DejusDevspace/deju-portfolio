@@ -6,21 +6,6 @@ const projects = [
   {
     id: 0,
     num: "01",
-    name: "Portfolio Website",
-    category: "Frontend",
-    description:
-      "A personal portfolio website designed to showcase my skills, projects, and professional experience. It features smooth animations, responsive design, and a modern UI/UX experience.",
-    stack: [
-      { name: "React.js" },
-      { name: "Tailwind CSS" },
-      { name: "Framer Motion" },
-    ],
-    links: { live: "#", github: "#" },
-    image: "#",
-  },
-  {
-    id: 1,
-    num: "02",
     name: "AI Learning Assistant",
     category: "AI / Backend",
     description:
@@ -39,8 +24,8 @@ const projects = [
     image: learningAssistantImg,
   },
   {
-    id: 2,
-    num: "03",
+    id: 1,
+    num: "02",
     name: "Beans Disease Classifier",
     category: "Deep Learning",
     description:
@@ -58,8 +43,8 @@ const projects = [
     image: beanClassificationImg,
   },
   {
-    id: 5,
-    num: "06",
+    id: 4,
+    num: "05",
     name: "Executive Election App",
     category: "Full Stack",
     description:
@@ -78,8 +63,8 @@ const projects = [
     image: electionImg,
   },
   {
-    id: 3,
-    num: "04",
+    id: 2,
+    num: "03",
     name: "Election Web App",
     category: "Full Stack",
     description:
@@ -98,8 +83,8 @@ const projects = [
     image: electionImg,
   },
   {
-    id: 4,
-    num: "05",
+    id: 3,
+    num: "04",
     name: "CV Summarizer App",
     category: "Generative AI",
     description:

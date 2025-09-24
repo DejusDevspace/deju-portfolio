@@ -5,7 +5,7 @@ const data = [
   {
     period: "Sept 2025 - Present",
     role: "GenAI & Data Science Intern",
-    company: "FlexiSAF Edusoft Limited",
+    company: "FlexiSAF",
     description:
       "Prototyping data pipelines and advanced Generative AI solutions.",
     locationType: "Remote",
