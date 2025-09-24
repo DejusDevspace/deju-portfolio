@@ -1,4 +1,3 @@
-// File: aboutSection/MyTools.jsx
 import React from "react";
 import { motion } from "framer-motion";
 import { tools } from "./sectionData";
@@ -40,7 +39,8 @@ const MyTools = ({ animateInverse }) => {
         {tools.map((tool, idx) => (
           <div
             key={idx}
-            className="flex items-center gap-2 text-base text-primary font-semibold uppercase hover:text-accent transition-all"
+            className="flex items-center gap-1 text-sm text-primary font-semibold uppercase hover:text-accent
+            bg-accent/10 px-4 py-2 rounded-xl transition-all"
           >
             <tool.icon className="text-sm" />
             <span>{tool.name}</span>

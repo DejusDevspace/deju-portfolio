@@ -29,8 +29,8 @@ const ProjectCard = ({ project }) => {
           viewport={{ once: true, amount: 0.2 }}
         >
           <div
-            className="relative group flex justify-center items-center bg-accent/10 rounded-lg shadow-md hover:shadow-accent transition-all duration-300
-                        xl:h-[204px] h-auto overflow-hidden"
+            className="relative group flex justify-center items-center bg-accent/10 rounded-lg shadow-md
+          xl:h-[204px] h-auto overflow-hidden"
           >
             <img
               src={project.image}
@@ -52,7 +52,7 @@ const ProjectCard = ({ project }) => {
         </h2>
         <p className="text-primary/50 text-sm xl:text-md">
           {project.description.length > 150
-            ? project.description.slice(0, 95) + "..."
+            ? project.description.slice(0, 97) + "..."
             : project.description}
         </p>
         <ul className="flex gap-1.5 flex-wrap">
@@ -76,19 +76,22 @@ const ProjectCard = ({ project }) => {
               <GoArrowUpRight className="text-2xl group-hover:text-accent" />
             </a> */}
             <button
-              className="px-6 py-2 bg-primary text-secondary shadow-md hover:scale-105 rounded-xl
+              className="px-6 py-2 bg-accent/15 text-primary shadow-md hover:scale-105 rounded-xl
             transition-all duration-300"
             >
               More Info
             </button>
           </div>
-          <div className="flex justify-center items-center group w-[40px] h-[40px] bg-secondary rounded-full cursor-pointer">
+          <div
+            className="flex justify-center items-center group w-[40px] h-[40px] bg-accent/15
+          rounded-full cursor-pointer hover:scale-115 transition-all duration-300"
+          >
             <a
               href={project.links.github}
               target="_blank"
               rel="noopener noreferrer"
             >
-              <FaGithub className="text-2xl group-hover:text-accent" />
+              <FaGithub className="text-2xl" />
             </a>
           </div>
         </div>
