@@ -10,8 +10,6 @@ import { GoArrowUpRight } from "react-icons/go";
 
 const ProjectDetailModal = ({ project, isOpen, onClose }) => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
-
-  // Mock additional images for carousel - in real use, project should have multiple images
   const projectImages = project?.docImages || [project?.image];
 
   const nextImage = () => {
@@ -108,7 +106,7 @@ const ProjectDetailModal = ({ project, isOpen, onClose }) => {
                       {project.name}
                     </h2>
                     <p className="text-primary/60 text-sm uppercase tracking-wider">
-                      {project.category || "Web Application"}
+                      {project.category || "ML/AI"}
                     </p>
                   </div>
 
@@ -121,27 +119,6 @@ const ProjectDetailModal = ({ project, isOpen, onClose }) => {
                       {project.description}
                     </p>
                   </div>
-
-                  {/* Key Features */}
-                  {project.features && (
-                    <div>
-                      <h3 className="text-xl font-semibold text-primary mb-3">
-                        Key Features
-                      </h3>
-                      <ul className="space-y-2">
-                        {project.features.map((feature, index) => (
-                          <li
-                            key={index}
-                            className="text-primary/70 flex items-start"
-                          >
-                            <span className="text-accent mr-2 mt-1">•</span>
-                            {feature}
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-                  )}
-
                   {/* Tech Stack */}
                   <div>
                     <h3 className="text-xl font-semibold text-primary mb-3">
