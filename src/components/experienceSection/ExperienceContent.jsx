@@ -3,6 +3,14 @@ import { motion } from "framer-motion";
 
 const data = [
   {
+    period: "Sept 2025 - Present",
+    role: "GenAI & Data Science Intern",
+    company: "FlexiSAF Edusoft Limited",
+    description:
+      "Prototyping data pipelines and advanced Generative AI solutions.",
+    locationType: "Remote",
+  },
+  {
     period: "Feb - Sept 2024",
     role: "Machine Learning Intern",
     company: "NCAIR, Abuja",
