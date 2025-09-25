@@ -9,6 +9,7 @@ import {
 import { GoArrowUpRight } from "react-icons/go";
 
 const ProjectDetailModal = ({ project, isOpen, onClose }) => {
+  const [touchStartX, setTouchStartX] = useState(null);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const projectImages = project?.docImages || [project?.image];
 
