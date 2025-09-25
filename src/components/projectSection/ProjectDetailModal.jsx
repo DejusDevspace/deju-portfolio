@@ -32,9 +32,8 @@ const ProjectDetailModal = ({ project, isOpen, onClose }) => {
     const touchEndX = e.changedTouches[0].clientX;
     const diff = touchStartX - touchEndX;
 
-    // adjust threshold (in px) to your liking
-    if (diff > 50) nextImage(); // swipe left → next
-    else if (diff < -50) prevImage(); // swipe right → previous
+    if (diff > 50) nextImage();
+    else if (diff < -50) prevImage();
     setTouchStartX(null);
   };
 
