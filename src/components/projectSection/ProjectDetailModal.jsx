@@ -22,6 +22,21 @@ const ProjectDetailModal = ({ project, isOpen, onClose }) => {
     );
   };
 
+  const handleTouchStart = (e) => {
+    setTouchStartX(e.touches[0].clientX);
+  };
+
+  const handleTouchEnd = (e) => {
+    if (touchStartX === null) return;
+    const touchEndX = e.changedTouches[0].clientX;
+    const diff = touchStartX - touchEndX;
+
+    // adjust threshold (in px) to your liking
+    if (diff > 50) nextImage(); // swipe left → next
+    else if (diff < -50) prevImage(); // swipe right → previous
+    setTouchStartX(null);
+  };
+
   if (!project) return null;
 
   return (
@@ -53,7 +68,11 @@ const ProjectDetailModal = ({ project, isOpen, onClose }) => {
             <div className="flex flex-col lg:flex-row max-h-[80vh] xl:h-full">
               {/* Image Section */}
               <div className="lg:w-[95%] relative bg-accent/5">
-                <div className="relative h-60 lg:h-full">
+                <div
+                  className="relative h-60 lg:h-full"
+                  onTouchStart={handleTouchStart}
+                  onTouchEnd={handleTouchEnd}
+                >
                   <img
                     src={projectImages[currentImageIndex]}
                     alt={`${project.name} screenshot ${currentImageIndex + 1}`}
