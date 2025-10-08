@@ -13,10 +13,8 @@ import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 function App() {
-  // const [isLoaded, setIsLoaded] = useState(false);
   return (
     <>
-      {/* {!isLoaded && <LoadingScreen onComplete={() => setIsLoaded(true)} />} */}
       <ToastContainer
         position="top-right"
         autoClose={3000}
