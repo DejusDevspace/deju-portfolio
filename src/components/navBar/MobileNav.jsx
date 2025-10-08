@@ -3,7 +3,7 @@ import { CiMenuFries } from "react-icons/ci";
 import { motion, AnimatePresence } from "framer-motion";
 import SocialIcon from "../common/SocialIcon";
 
-const MobileNav = ({ navList, socialList, active, onClick }) => {
+const MobileNav = ({ navList, socialList, active, onClick, ThemeToggle }) => {
   const [isOpen, setIsOpen] = useState(false);
   const menuRef = useRef();
 
@@ -37,10 +37,11 @@ const MobileNav = ({ navList, socialList, active, onClick }) => {
       className="relative"
       ref={menuRef}
     >
-      <div className="flex gap-4">
+      <div className="flex items-center gap-4">
         {socialList.map((social, index) => (
           <SocialIcon key={index} icon={social.icon} link={social.link} />
         ))}
+        {ThemeToggle}
       </div>
 
       <div className="fixed bottom-0 right-0 p-4 m-4 z-20 rounded-xl bg-secondary shadow-xl">

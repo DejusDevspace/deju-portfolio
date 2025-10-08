@@ -21,7 +21,7 @@
   --color-neonBlue: #00ffff;
 
   /* Neon Shadow for glow effects */
-  --shadow-neon: 0 0 10px #00ffff, 0 0 20px #00ffff, 0 0 30px #00ffff;
+  --shadow-neon: 0 0 5px #00ffff, 0 0 15px #00ffff, 0 0 15px #00ffff;
 }
 
 @layer base {
@@ -35,6 +35,15 @@
     color: var(--color-primary);
     font-family: var(--font-primary);
     background-color: var(--color-background);
+  }
+
+  body.light-mode {
+    --color-primary: #000000;
+    --color-secondary: #f4ecec;
+    --color-background: #e2dcdc;
+    --color-accent: #0077ff;
+    --color-neonBlue: #0077ff;
+    --shadow-neon: 0 0 5px #0077ff, 0 0 15px #0077ff, 0 0 15px #0077ff;
   }
 }
 

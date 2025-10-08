@@ -2,7 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import SocialIcon from "../common/SocialIcon";
 
-const DesktopNav = ({ navList, socialList, active, onClick }) => {
+const DesktopNav = ({ navList, socialList, active, onClick, ThemeToggle }) => {
   return (
     <motion.div
       className="hidden lg:flex items-center justify-between w-full"
@@ -12,7 +12,7 @@ const DesktopNav = ({ navList, socialList, active, onClick }) => {
       transition={{ duration: 0.6, ease: "easeInOut" }}
       viewport={{ once: true }}
     >
-      <nav className="flex gap-6 list-none">
+      <nav className="flex gap-6 items-center list-none">
         {navList.map((item, index) => (
           <li key={index} onClick={() => onClick(index)}>
             <a
@@ -25,10 +25,11 @@ const DesktopNav = ({ navList, socialList, active, onClick }) => {
             </a>
           </li>
         ))}
-        <div className="flex gap-4">
+        <div className="flex items-center gap-4">
           {socialList.map((social, index) => (
             <SocialIcon key={index} icon={social.icon} link={social.link} />
           ))}
+          {ThemeToggle}
         </div>
       </nav>
     </motion.div>
