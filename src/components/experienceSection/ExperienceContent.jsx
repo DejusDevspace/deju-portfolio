@@ -74,13 +74,13 @@ const ExperienceContent = () => {
             className="relative bg-secondary p-6 rounded-xl shadow-md hover:shadow-accent transition-shadow duration-300 xl:max-w-[32%]"
           >
             <p className="text-accent text-sm mb-2">{item.period}</p>
-            <h3 className="text-xl font-semibold text-white mb-2">
+            <h3 className="text-xl font-semibold text-primary mb-2">
               {item.role}
             </h3>
-            <p className="text-white/80 text-sm mb-4">{item.description}</p>
+            <p className="text-primary/80 text-sm mb-4">{item.description}</p>
 
             <div className="flex justify-start mt-6">
-              <div className="flex items-center gap-2 text-white font-medium">
+              <div className="flex items-center gap-2 text-primary font-medium">
                 <span className="text-accent text-xl">●</span>
                 {item.company}
                 <span className="text-sm xl:hidden bg-accent/70 text-transparent bg-clip-text">
