@@ -50,7 +50,7 @@ const ProjectDetailModal = ({ project, isOpen, onClose }) => {
           onClick={onClose}
         >
           <motion.div
-            className="relative w-full xl:max-w-[82%] h-[79vh] xl:h-[70vh] bg-secondary rounded-2xl shadow-2xl overflow-hidden"
+            className="relative w-full xl:max-w-[82%] h-[79vh] xl:h-[70vh] bg-secondary rounded-3xl shadow-2xl overflow-hidden"
             initial={{ scale: 0.8, opacity: 0, y: 50 }}
             animate={{ scale: 1, opacity: 1, y: 0 }}
             exit={{ scale: 0.8, opacity: 0, y: 50 }}

@@ -71,7 +71,7 @@ const ExperienceContent = () => {
             whileInView={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.6, delay: index * 0.2 }}
             viewport={{ once: true }}
-            className="relative bg-secondary p-6 rounded-xl shadow-md hover:shadow-accent transition-shadow duration-300 xl:max-w-[32%]"
+            className="relative bg-secondary p-6 rounded-3xl shadow-md hover:shadow-accent transition-shadow duration-300 xl:max-w-[32%]"
           >
             <p className="text-accent text-sm mb-2">{item.period}</p>
             <h3 className="text-xl font-semibold text-primary mb-2">

@@ -13,7 +13,7 @@ const ProjectCard = ({ project }) => {
   return (
     <>
       <motion.div
-        className="rounded-2xl my-4 p-8 xl:max-w-[31.5%] shadow-xl bg-secondary hover:shadow-lg hover:shadow-neonBlue transition-all duration-300"
+        className="rounded-4xl my-4 p-8 xl:max-w-[31.5%] shadow-xl bg-secondary hover:shadow-lg hover:shadow-neonBlue transition-all duration-300"
         whileHover={{ scale: 1.02 }}
       >
         <motion.div
