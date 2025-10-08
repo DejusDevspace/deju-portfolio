@@ -84,13 +84,15 @@ const ProjectDetailModal = ({ project, isOpen, onClose }) => {
                     <>
                       <button
                         onClick={prevImage}
-                        className="absolute left-4 top-1/2 transform -translate-y-1/2 p-2 bg-black/20 hover:bg-black/40 rounded-full transition-all duration-200"
+                        className="absolute left-4 top-1/2 transform -translate-y-1/2 p-2 bg-black/20 hover:bg-black/40
+                        cursor-pointer rounded-full transition-all duration-200"
                       >
                         <FaChevronLeft className="text-white" />
                       </button>
                       <button
                         onClick={nextImage}
-                        className="absolute right-4 top-1/2 transform -translate-y-1/2 p-2 bg-black/20 hover:bg-black/40 rounded-full transition-all duration-200"
+                        className="absolute right-4 top-1/2 transform -translate-y-1/2 p-2 bg-black/20 hover:bg-black/40
+                        cursor-pointer rounded-full transition-all duration-200"
                       >
                         <FaChevronRight className="text-white" />
                       </button>
