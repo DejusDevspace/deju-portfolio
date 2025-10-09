@@ -126,7 +126,7 @@ const ProjectDetailModal = ({ project, isOpen, onClose }) => {
                     <h2 className="text-3xl lg:text-4xl font-bold text-primary mb-2 capitalize">
                       {project.name}
                     </h2>
-                    <p className="text-primary/60 text-sm uppercase tracking-wider">
+                    <p className="text-accent/60 text-sm uppercase tracking-wider">
                       {project.category || "ML/AI"}
                     </p>
                   </div>

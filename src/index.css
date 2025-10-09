@@ -38,12 +38,13 @@
   }
 
   body.light-mode {
-    --color-primary: #000000;
-    --color-secondary: #f4ecec;
-    --color-background: #e2dcdc;
-    --color-accent: #0077ff;
-    --color-neonBlue: #0077ff;
-    --shadow-neon: 0 0 5px #0077ff, 0 0 15px #0077ff, 0 0 15px #0077ff;
+    --color-primary: #1a1a2e;
+    --color-secondary: #f5f5f5;
+    --color-background: #fafafa;
+    --color-accent: #00c9c9;
+    --color-neonBlue: #00e5e5;
+    --shadow-neon: 0 0 8px rgba(0, 201, 201, 0.25),
+      0 0 20px rgba(0, 201, 201, 0.15), 0 0 30px rgba(0, 201, 201, 0.08);
   }
 }
 
