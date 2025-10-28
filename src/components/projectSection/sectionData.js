@@ -16,9 +16,28 @@ import electionEnd from "../../assets/projects/baeselections/election-end.png";
 const projects = [
   {
     id: 0,
-    num: "01",
+    name: "FPL Gaffer",
+    category: "Generative AI | Agentic AI | Full Stack",
+    description:
+      "FPL Gaffer is an intelligent agentic AI system designed to assist Fantasy Premier League (FPL) managers with informed decision-making. Built using LangGraph, it combines real-time data retrieval, intelligent tool orchestration, and response validation to provide accurate, hallucination-free advice for your FPL team.",
+    stack: [
+      { name: "Python" },
+      { name: "LangGraph" },
+      { name: "LangChain" },
+      { name: "FastAPI" },
+      { name: "Groq" },
+      { name: "Twilio" },
+    ],
+    links: {
+      live: "#",
+      github: "https://github.com/DejusDevspace/fpl-gaffer",
+    },
+    image: "",
+  },
+  {
+    id: 1,
     name: "AI Learning Assistant",
-    category: "AI / Backend",
+    category: "AI | Backend",
     description:
       "Developed an AI learning assistant with document upload, semantic routing, YouTube video summarization, and chat history. Integrated Retrieval-Augmented Generation (RAG) using LangChain, Groq LLM, and Streamlit.",
     stack: [
@@ -41,8 +60,7 @@ const projects = [
     ],
   },
   {
-    id: 1,
-    num: "02",
+    id: 2,
     name: "Beans Disease Classifier",
     category: "Deep Learning",
     description:
@@ -62,8 +80,7 @@ const projects = [
     docImages: [beanClassificationImg, beanTrainingCurves, beanConfusionMatrix],
   },
   {
-    id: 2,
-    num: "03",
+    id: 3,
     name: "BAES Election Website",
     category: "Full Stack",
     description:
@@ -110,8 +127,7 @@ const projects = [
   //   image: electionLandingPg,
   // },
   {
-    id: 3,
-    num: "04",
+    id: 4,
     name: "CV Summarizer RAG App",
     category: "Generative AI",
     description:
