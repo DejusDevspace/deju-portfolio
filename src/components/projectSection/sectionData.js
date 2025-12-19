@@ -12,6 +12,11 @@ import electionLoginPg from "../../assets/projects/baeselections/login.png";
 import electionVoting from "../../assets/projects/baeselections/voting.png";
 import electionLivePoll from "../../assets/projects/baeselections/live-poll.png";
 import electionEnd from "../../assets/projects/baeselections/election-end.png";
+// FPL Gaffer project
+import gafferDashboard from "../../assets/projects/fpl-gaffer/gaffer-dashboard.png";
+import gafferChat from "../../assets/projects/fpl-gaffer/gaffer-chat.png";
+import gafferWhatsapp1 from "../../assets/projects/fpl-gaffer/gaffer-whatsapp1.jpeg";
+import gafferWhatsapp2 from "../../assets/projects/fpl-gaffer/gaffer-whatsapp2.jpeg";
 
 const projects = [
   {
@@ -32,7 +37,8 @@ const projects = [
       live: "#",
       github: "https://github.com/DejusDevspace/fpl-gaffer",
     },
-    image: "",
+    image: gafferDashboard,
+    docImages: [gafferWhatsapp1, gafferChat, gafferWhatsapp2, gafferDashboard],
   },
   {
     id: 1,
