@@ -4,6 +4,7 @@ import AboutMain from "./aboutSection/AboutMain";
 import ProjectMain from "./projectSection/ProjectMain";
 import ContactMain from "./contactSection/ContactMain";
 import ExperienceMain from "./experienceSection/ExperienceMain";
+import BlogMain from "./blogSection/BlogMain";
 
 export {
   NavMain,
@@ -12,4 +13,5 @@ export {
   ProjectMain,
   ContactMain,
   ExperienceMain,
+  BlogMain,
 };

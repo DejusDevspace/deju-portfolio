@@ -24,35 +24,13 @@ const AboutMain = () => {
             transition={{ duration: 1, ease: "easeOut" }}
             viewport={{ once: true, amount: 0.1 }}
           >
-            <p className="text-sm xl:text-lg text-primary/80">
-              I'm a Jack of a few a trades and a Mechatronics Engineering
-              graduate from{" "}
-              <span className="text-accent font-bold">Bowen University</span>,
-              Nigeria.
+            <p className="text-sm xl:text-lg text-primary/80 leading-relaxed">
+              I’m a Machine Learning Engineer and Data Scientist who builds production-ready AI systems, not just models.
+              I specialize in Python, machine learning, computer vision, NLP, and data analytics, with experience taking ideas from raw data to deployed solutions.
+              I focus on scalable, practical AI, enjoy solving hard problems, and consistently ship real-world projects that deliver measurable value.
+              <br /> <br />
+              When I'm not actively building projects, I'm writing my blog with the aim of explaining complex AI topics as simply as possible.
             </p>
-            <p className="text-sm xl:text-lg text-primary/80">
-              I am currently working on data science, machine learning and AI
-              projects, experimenting with AI models, getting obsessed with
-              agentic workflows, training stubborn models, and occasionally
-              yelling at my terminal when things break (which they do...often).
-            </p>
-          </motion.div>
-          <motion.div
-            className="flex flex-col gap-4"
-            initial={{ opacity: 0, y: 100 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, ease: "easeOut" }}
-            viewport={{ once: true, amount: 0.1 }}
-          >
-            <p className="font-bold text-accent">
-              // When I'm not working, I am:
-            </p>
-            <ul className="list-disc pl-6 text-sm xl:text-lg text-primary/80">
-              <li>staying up to date with tech advancements</li>
-              <li>playing PC games (mostly just EA SPORTS FC)</li>
-              <li>watching a movie for 2 weeks</li>
-              <li>adding to my graveyard of half-finished side projects</li>
-            </ul>
           </motion.div>
           <motion.div
             className="flex flex-col gap-4"

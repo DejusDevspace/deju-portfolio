@@ -1,19 +1,19 @@
-import React, { useState } from "react";
-import ProjectDetailModal from "./ProjectDetailModal";
+import React from "react";
+// import ProjectDetailModal from "./ProjectDetailModal";
 // import { GoArrowUpRight } from "react-icons/go";
 import { FaGithub } from "react-icons/fa";
 import { motion } from "framer-motion";
 // import { BsFolderFill } from "react-icons/bs";
 
 const ProjectCard = ({ project }) => {
-  const [isModalOpen, setIsModalOpen] = useState(false);
+  // const [isModalOpen, setIsModalOpen] = useState(false); // Modal disabled as per request
   const isNotEven = project.id % 2 !== 0;
   const textSlideFrom = isNotEven ? 100 : -100;
 
   return (
     <>
       <motion.div
-        className="rounded-4xl my-4 p-8 xl:max-w-[31.5%] shadow-xl bg-secondary hover:shadow-lg hover:shadow-neonBlue transition-all duration-300"
+        className="rounded-4xl my-4 p-8 xl:max-w-[31.5%] shadow-xl bg-secondary/40 backdrop-blur-md border border-white/10 hover:shadow-lg hover:shadow-neonBlue transition-all duration-300"
         whileHover={{ scale: 1.02 }}
       >
         <motion.div
@@ -44,10 +44,8 @@ const ProjectCard = ({ project }) => {
             {project.name}
           </h2>
 
-          <p className="text-primary/50 text-sm xl:text-md">
-            {project.description.length > 150
-              ? project.description.slice(0, 97) + "..."
-              : project.description}
+          <p className="text-primary text-lg xl:text-xl leading-relaxed">
+            {project.description}
           </p>
 
           <ul className="flex gap-1.5 flex-wrap">
@@ -62,12 +60,14 @@ const ProjectCard = ({ project }) => {
           <div className="border border-primary/20" />
 
           <div className="flex gap-4">
-            <button
-              onClick={() => setIsModalOpen(true)}
+            <a
+              href={project.links.live}
+              target="_blank"
+              rel="noopener noreferrer"
               className="px-6 py-2 bg-accent/10 text-primary shadow-md hover:scale-105 rounded-xl cursor-pointer transition-all duration-300"
             >
-              More Info
-            </button>
+              Live Link
+            </a>
 
             <div className="flex justify-center items-center group w-[40px] h-[40px] bg-accent/10 rounded-full cursor-pointer hover:scale-115 transition-all duration-300">
               <a
@@ -82,11 +82,7 @@ const ProjectCard = ({ project }) => {
         </motion.div>
       </motion.div>
 
-      <ProjectDetailModal
-        project={project}
-        isOpen={isModalOpen}
-        onClose={() => setIsModalOpen(false)}
-      />
+      {/* ProjectDetailModal removed per request to switch to direct Live Link */}
     </>
   );
 };

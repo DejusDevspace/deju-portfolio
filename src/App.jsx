@@ -7,8 +7,10 @@ import {
   ProjectMain,
   ContactMain,
   ExperienceMain,
+  BlogMain,
 } from "./components";
 import Footer from "./components/layout/Footer";
+import ParticleBackground from "./components/ParticleBackground";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
@@ -24,6 +26,7 @@ function App() {
         hideProgressBar={false}
       />
       <div className="relative flex flex-col overflow-x-hidden z-0">
+        <ParticleBackground />
         <NavMain />
         <main className="relative z-10 flex-grow flex flex-col justify-center items-center">
           <section id="home">
@@ -37,6 +40,9 @@ function App() {
           </section>
           <section id="projects">
             <ProjectMain />
+          </section>
+          <section id="blog">
+            <BlogMain />
           </section>
           <div id="contact">
             <ContactMain />

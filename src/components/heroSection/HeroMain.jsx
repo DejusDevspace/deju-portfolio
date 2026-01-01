@@ -3,17 +3,17 @@ import { motion, AnimatePresence } from "framer-motion";
 import DownloadCVButton from "../common/DownloadCVButton";
 import LottieAnimation from "./LottieAnimation";
 
-// const roles = [
-//   "a Data Scientist",
-//   "a Machine Learning Engineer",
-//   "an AI Engineer",
-// ];
+const roles = [
+  "a Data Scientist",
+  "a Machine Learning Engineer",
+  "an AI Engineer",
+];
 
 export default function HeroMain() {
-  const greeting = "Hi, I'm Deju.";
+  const greeting = "Hi, I'm John.";
   const [displayedGreeting, setDisplayedGreeting] = useState("");
   const [greetIndex, setGreetIndex] = useState(0);
-  // const [roleIndex, setRoleIndex] = useState(0);
+  const [roleIndex, setRoleIndex] = useState(0);
 
   useEffect(() => {
     if (greetIndex < greeting.length) {
@@ -25,12 +25,12 @@ export default function HeroMain() {
     }
   }, [greetIndex]);
 
-  // useEffect(() => {
-  //   const interval = setInterval(() => {
-  //     setRoleIndex((i) => (i + 1) % roles.length);
-  //   }, 3000);
-  //   return () => clearInterval(interval);
-  // }, []);
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setRoleIndex((i) => (i + 1) % roles.length);
+    }, 3000);
+    return () => clearInterval(interval);
+  }, []);
 
   return (
     <div className="relative flex items-center justify-center min-h-[95vh] w-full">
@@ -45,35 +45,30 @@ export default function HeroMain() {
           {displayedGreeting}
           <span className="text-accent animate-blink">|</span>
         </h1>
-        {/* Static Role Badge */}
-        {/* <div className="h-8 xl:h-10 overflow-hidden mt-2">
-          <AnimatePresence exitBeforeEnter>
+
+        {/* Rotating Role Badge */}
+        <motion.div
+          className="relative mt-2 mb-4 h-8 xl:h-10 overflow-hidden z-20"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.5 }}
+        >
+          <AnimatePresence mode="wait">
             <motion.h2
               key={roles[roleIndex]}
-              className="text-md xl:text-xl text-accent"
-              initial={{ opacity: 0, y: 10 }}
+              className="text-md xl:text-xl text-accent font-medium"
+              initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -10 }}
+              exit={{ opacity: 0, y: -20 }}
               transition={{ duration: 0.5, ease: "easeInOut" }}
             >
-              {`I'm ${roles[roleIndex]}.`}
+              {`I'm ${roles[roleIndex]}`}
             </motion.h2>
           </AnimatePresence>
-        </div> */}
-        <motion.div
-          className="absolute left-8 top-8 -z-20 xl:left-50 px-4 py-2 rounded-full
-          border border-accent/40 bg-accent/10 backdrop-blur-3xl"
-          initial={{ opacity: 0, scale: 0.8 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ delay: 0.4, duration: 0.6, ease: "easeOut" }}
-        >
-          <span className="text-[12px] xl:text-base text-accent font-medium tracking-wide">
-            AI/ML Engineer
-          </span>
         </motion.div>
 
         <p className="text-sm xl:text-lg max-w-[500px] px-2 xl:max-w-[800px] my-4 text-primary/80">
-          Just a curious human who turns ☕ + 💻 into fun and useful projects...
+          Obsessed with building the future
         </p>
         <motion.div
           initial={{ opacity: 0 }}

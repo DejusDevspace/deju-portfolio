@@ -12,8 +12,18 @@ const Footer = () => {
       className="flex flex-col items-center text-center gap-2 py-8 text-sm
       text-primary/70 bg-transparent bg-clip-content"
     >
-      <p className="text-sm">Crafted with care ❤️</p>
-      <p className="text-sm">Deju Adejo &copy; {currentYear}</p>
+      <p className="text-sm">
+        Crafted with love ❤️ | Inspired by{" "}
+        <a
+          href="https://dejuadejo.vercel.app/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-accent hover:underline"
+        >
+          DejuAdejo
+        </a>
+      </p>
+      <p className="text-sm">Jermaine &copy; {currentYear}</p>
     </motion.footer>
   );
 };

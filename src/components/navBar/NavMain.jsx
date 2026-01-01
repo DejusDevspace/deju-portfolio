@@ -3,8 +3,6 @@ import { motion } from "framer-motion";
 import DesktopNav from "./DesktopNav";
 import MobileNav from "./MobileNav";
 import { navList, socialLinks } from "./navData";
-import ThemeToggle from "./ThemeToggle";
-
 const NavMain = () => {
   const [isSelected, setSelected] = useState(0);
 
@@ -57,7 +55,7 @@ const NavMain = () => {
           transition={{ duration: 0.6, ease: "easeInOut" }}
           viewport={{ once: true }}
         >
-          Deju
+          Jermaine
         </motion.h1>
         <div className="hidden lg:flex">
           <DesktopNav
@@ -65,7 +63,6 @@ const NavMain = () => {
             socialList={socialLinks}
             active={isSelected}
             onClick={handleSelect}
-            ThemeToggle={<ThemeToggle />}
           />
         </div>
         <div className="lg:hidden">
@@ -74,7 +71,6 @@ const NavMain = () => {
             socialList={socialLinks}
             active={isSelected}
             onClick={handleSelect}
-            ThemeToggle={<ThemeToggle />}
           />
         </div>
       </div>

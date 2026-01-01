@@ -14,14 +14,19 @@
   --font-special: "Space Grotesk", sans-serif;
 
   /* Colors */
-  --color-primary: white;
-  --color-secondary: #010b25;
-  --color-background: #010b20;
-  --color-accent: #00ffff;
-  --color-neonBlue: #00ffff;
+  --color-primary: #e6f1ff;
+  /* Lightest Blue/White */
+  --color-secondary: #112240;
+  /* Light Navy */
+  --color-background: #0a192f;
+  /* Deep Navy */
+  --color-accent: #FFD700;
+  /* Gold */
+  --color-neonBlue: #FFD700;
+  /* Gold (replacing neon blue role with gold) */
 
   /* Neon Shadow for glow effects */
-  --shadow-neon: 0 0 5px #00ffff, 0 0 15px #00ffff, 0 0 15px #00ffff;
+  --shadow-neon: 0 0 5px #FFD700, 0 0 15px #FFD700, 0 0 15px #FFD700;
 }
 
 @layer base {
@@ -36,15 +41,6 @@
     font-family: var(--font-primary);
     background-color: var(--color-background);
   }
-
-  body.light-mode {
-    --color-primary: #000000;
-    --color-secondary: #f4ecec;
-    --color-background: #e2dcdc;
-    --color-accent: #0077ff;
-    --color-neonBlue: #0077ff;
-    --shadow-neon: 0 0 5px #0077ff, 0 0 15px #0077ff, 0 0 15px #0077ff;
-  }
 }
 
 @layer utilities {
@@ -52,6 +48,7 @@
     0% {
       transform: translateX(0%);
     }
+
     100% {
       transform: translateX(-50%);
     }
@@ -61,6 +58,7 @@
     0% {
       transform: translateX(-50%);
     }
+
     100% {
       transform: translateX(0%);
     }

@@ -33,11 +33,11 @@ const ContactMain = () => {
     };
 
     const responseTemplateParams = {
-      from_name: "Ojomideju Adejo",
+      from_name: "John Aledare",
       to_name: formData.name,
-      from_email: "ojomideju2003@gmail.com",
+      from_email: "aledareoluwaseunjohn@gmail.com",
       to_email: formData.email,
-      from_site: "https://dejuadejo.vercel.app/",
+      from_site: "https://github.com/Jaykay73", // Placeholder for actual site URL
     };
 
     // Message to me
@@ -106,86 +106,25 @@ const ContactMain = () => {
             transition={{ delay: 0.2, duration: 0.6, ease: "easeInOut" }}
             viewport={{ once: true, amount: 0.2 }}
           >
-            <form
-              className="w-full max-w-2xl mt-12 bg-secondary backdrop-blur-lg rounded-3xl border border-primary/10 p-8 xl:hover:shadow-[0_0_20px_5px_var(--color-neonBlue)] flex flex-col gap-6
-              transition-all duration-300"
-              onSubmit={handleSubmit}
-            >
-              <div className="flex flex-col gap-2">
-                <h3 className="text-accent">Let's Connect!</h3>
-                <p className="text-sm uppercase text-primary/50">
-                  I'm always open to discussing new projects, creative ideas, or
-                  opportunities, feel free to reach out. I would love to hear
-                  from you!
-                </p>
-              </div>
+            <div className="w-full max-w-2xl mt-12 bg-secondary backdrop-blur-lg rounded-3xl border border-primary/10 p-8 flex flex-col items-center gap-6 text-center shadow-[var(--shadow-neon)]">
+              <h3 className="text-2xl font-bold text-accent">Get In Touch</h3>
+              <p className="text-primary/80 max-w-md">
+                I'm currently open to new opportunities and collaborations.
+                Whether you have a question or just want to say hi, feel free to drop me an email!
+              </p>
 
-              <div>
-                <label className="block text-sm uppercase tracking-widest text-[var(--color-neonBlue)] mb-2">
-                  Name
-                </label>
-                <input
-                  name="name"
-                  type="text"
-                  placeholder="Your name"
-                  className="w-full px-4 py-3 bg-secondary/30 text-primary border border-primary/20 rounded-lg placeholder:text-primary/50 focus:outline-none focus:ring-2 focus:ring-[var(--color-neonBlue)]"
-                  value={formData.name}
-                  onChange={handleInputChange}
-                  required
-                />
-              </div>
-
-              <div>
-                <label className="block text-sm uppercase tracking-widest text-[var(--color-neonBlue)] mb-2">
-                  Email
-                </label>
-                <input
-                  name="email"
-                  type="email"
-                  placeholder="Your email address"
-                  className="w-full px-4 py-3 bg-secondary/30 text-primary border border-primary/20 rounded-lg placeholder:text-primary/50 focus:outline-none focus:ring-2 focus:ring-[var(--color-neonBlue)]"
-                  value={formData.email}
-                  onChange={handleInputChange}
-                  required
-                />
-              </div>
-
-              <div>
-                <label className="block text-sm uppercase tracking-widest text-[var(--color-neonBlue)] mb-2">
-                  Message
-                </label>
-                <textarea
-                  name="message"
-                  rows="5"
-                  placeholder="Tell me something great..."
-                  className="w-full px-4 py-3 bg-secondary/30 text-primary border border-primary/20 rounded-lg
-              placeholder:text-primary/50 focus:outline-none focus:ring-2 focus:ring-[var(--color-neonBlue)] resize-none"
-                  value={formData.message}
-                  onChange={handleInputChange}
-                  required
-                ></textarea>
-              </div>
-
-              <button
-                type="submit"
-                disabled={status === "sending"}
-                className="self-start px-6 py-3 mt-4 bg-[var(--color-neonBlue)] text-secondary font-bold rounded-lg
-            cursor-pointer shadow-[var(--shadow-neon)] hover:scale-105 transition-all duration-300"
+              <a
+                href="mailto:aledareoluwaseunjohn@gmail.com"
+                className="px-8 py-4 bg-transparent border-2 border-accent text-accent font-bold rounded-full 
+                hover:bg-accent hover:text-secondary transition-all duration-300 transform hover:scale-105"
               >
-                {status === "sending" ? "Sending..." : "Send Message 🚀"}
-              </button>
+                aledareoluwaseunjohn@gmail.com
+              </a>
 
-              {/* {status === "success" && (
-            <p className="text-green-400 text-sm xl:text-md mt-2">
-              Thanks for reaching out! I'll get back to you soon. ✅
-            </p>
-          )}
-          {status === "error" && (
-            <p className="text-red-500 text-sm xl:text-md mt-2">
-              Something went wrong. Please try again. ❌
-            </p>
-          )} */}
-            </form>
+              <div className="flex gap-6 mt-4">
+                {/* Social links are already in the footer/nav, but adding small ones here looks nice */}
+              </div>
+            </div>
           </motion.div>
         </div>
       </div>
