@@ -1,6 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 
+// TODO: Consider adding mindease AI integration project...
 const data = [
 	{
 		period: "Feb 2026 - Present",
@@ -11,7 +12,7 @@ const data = [
 		locationType: "Onsite",
 	},
 	{
-		period: "Sept 2025 - Present",
+		period: "Sept 2025 - December 2025",
 		role: "GenAI & Data Science Intern",
 		company: "FlexiSAF",
 		description:
