@@ -12,7 +12,7 @@ const data = [
 		locationType: "Onsite",
 	},
 	{
-		period: "Sept 2025 - December 2025",
+		period: "Sept 2025 - Dec 2025",
 		role: "GenAI & Data Science Intern",
 		company: "FlexiSAF",
 		description:
