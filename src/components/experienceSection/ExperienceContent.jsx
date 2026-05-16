@@ -5,14 +5,14 @@ import { motion } from "framer-motion";
 const data = [
 	{
 		period: "Feb 2026 - Present",
-		role: "Software Engineer",
-		company: "Blackbox Technology Systems Limited",
+		role: "Software Developer Intern",
+		company: "Blackbox",
 		description:
 			"Developing and maintaining scalable web applications, delivering end-to-end software solutions to clients.",
 		locationType: "Onsite",
 	},
 	{
-		period: "Sept 2025 - Dec 2025",
+		period: "Sept - Dec 2025",
 		role: "GenAI & Data Science Intern",
 		company: "FlexiSAF",
 		description:
