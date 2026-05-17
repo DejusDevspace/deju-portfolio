@@ -3,7 +3,7 @@ import { RiTwitterXFill } from "react-icons/ri";
 import { FaGithub } from "react-icons/fa";
 import { MdOutgoingMail } from "react-icons/md";
 
-export const BLOG_URL = "https://blog.dejuadejo.vercel.app";
+export const BLOG_URL = "https://dejusdevspace.vercel.app";
 export const navList = [
 	"Home",
 	"About",
