@@ -69,10 +69,10 @@ const MobileNav = ({ navList, socialList, active, onClick, ThemeToggle }) => {
 								>
 									<a
 										href={
-											item === "Blog" ? `${BLOG_URL}` : `#${item.toLowerCase()}`
+											link === "Blog" ? `${BLOG_URL}` : `#${link.toLowerCase()}`
 										}
-										target={item === "Blog" ? "_blank" : undefined}
-										rel={item === "Blog" ? "noopener noreferrer" : undefined}
+										target={link === "Blog" ? "_blank" : undefined}
+										rel={link === "Blog" ? "noopener noreferrer" : undefined}
 										className={`${
 											active === index ? "text-accent" : "text-primary"
 										} hover:text-accent/70 cursor-pointer capitalize`}
