@@ -25,6 +25,13 @@ import ledgaGuide5 from "../../assets/projects/ledga/ledga-guide5.png";
 import ledgaGuide6 from "../../assets/projects/ledga/ledga-guide6.png";
 import ledgaSettings from "../../assets/projects/ledga/ledga-settings.png";
 
+// Mindease project
+import mindeaseChatbotTyping from "../../assets/projects/mindease/mindease-chatbot-typing.png";
+import mindeaseLanding from "../../assets/projects/mindease/mindease-landing.png";
+import mindeaseTimeManagement from "../../assets/projects/mindease/mindease-time-mgmt.png";
+import mindeaseFeatures from "../../assets/projects/mindease/mindease-features.png";
+import mindeaseSleep from "../../assets/projects/mindease/mindease-sleep.png";
+
 const projects = [
 	{
 		id: 0,
@@ -75,6 +82,34 @@ const projects = [
 	},
 	{
 		id: 2,
+		name: "Mindease AI",
+		category: "AI | Backend",
+		description:
+			"MindEase AI Integration is an empathetic AI companion backend built to support students with academic stress and emotional well-being, serving as the chatbot engine for the MindEase platform. Developed with FastAPI and Groq's Llama 3.3 70B model, it delivers multi-turn conversations via a REST API with SQLite-persisted conversation history, conversation management endpoints, configurable model parameters, and production-ready Docker deployment with health checks.",
+		stack: [
+			{ name: "Python" },
+			{ name: "FastAPI" },
+			{ name: "Groq API" },
+			{ name: "Docker" },
+			{ name: "Chainlit" },
+			{ name: "SQLite" },
+			{ name: "Render" },
+		],
+		links: {
+			live: "https://mindeaseproject.vercel.app/",
+			github: "https://github.com/DejusDevspace/MindEase-AI-Integration",
+		},
+		image: mindeaseChatbotTyping,
+		docImages: [
+			mindeaseChatbotTyping,
+			mindeaseLanding,
+			mindeaseTimeManagement,
+			mindeaseFeatures,
+			mindeaseSleep,
+		],
+	},
+	{
+		id: 3,
 		name: "AI Learning Assistant",
 		category: "AI | Backend",
 		description:
@@ -98,26 +133,26 @@ const projects = [
 			learningAssistantLangSmith2,
 		],
 	},
-	{
-		id: 3,
-		name: "Beans Disease Classifier",
-		category: "Deep Learning",
-		description:
-			"Built an image classification system for identifying beans plant diseases using Vanilla CNN and Transfer Learning techiques. Used pretrained VGG16 for feature extraction and trained an SVM for accurate classification of leaf diseases.",
-		stack: [
-			{ name: "Python" },
-			{ name: "TensorFlow" },
-			{ name: "Keras" },
-			{ name: "Flask" },
-			{ name: "Numpy" },
-		],
-		links: {
-			live: "#",
-			github: "https://github.com/DejusDevspace/bean-disease-classification",
-		},
-		image: beanClassificationImg,
-		docImages: [beanClassificationImg, beanTrainingCurves, beanConfusionMatrix],
-	},
+	// {
+	// 	id: 4,
+	// 	name: "Beans Disease Classifier",
+	// 	category: "Deep Learning",
+	// 	description:
+	// 		"Built an image classification system for identifying beans plant diseases using Vanilla CNN and Transfer Learning techiques. Used pretrained VGG16 for feature extraction and trained an SVM for accurate classification of leaf diseases.",
+	// 	stack: [
+	// 		{ name: "Python" },
+	// 		{ name: "TensorFlow" },
+	// 		{ name: "Keras" },
+	// 		{ name: "Flask" },
+	// 		{ name: "Numpy" },
+	// 	],
+	// 	links: {
+	// 		live: "#",
+	// 		github: "https://github.com/DejusDevspace/bean-disease-classification",
+	// 	},
+	// 	image: beanClassificationImg,
+	// 	docImages: [beanClassificationImg, beanTrainingCurves, beanConfusionMatrix],
+	// },
 	{
 		id: 4,
 		name: "BAES Election Website",
