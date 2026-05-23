@@ -3,6 +3,7 @@ import { CiMenuFries } from "react-icons/ci";
 import { motion, AnimatePresence } from "framer-motion";
 import SocialIcon from "../common/SocialIcon";
 import { BLOG_URL } from "./navData";
+import { FiExternalLink } from "react-icons/fi";
 
 const MobileNav = ({ navList, socialList, active, onClick, ThemeToggle }) => {
 	const [isOpen, setIsOpen] = useState(false);
@@ -56,8 +57,7 @@ const MobileNav = ({ navList, socialList, active, onClick, ThemeToggle }) => {
 							initial={{ opacity: 0, y: -10 }}
 							animate={{ opacity: 1, y: -250 }}
 							exit={{ opacity: 0, y: -10 }}
-							className="absolute right-0 -mt-6 bg-secondary rounded-lg shadow-xl
-            py-4 px-6 flex flex-col gap-4 z-20"
+							className="absolute right-0 -mt-18 bg-secondary rounded-lg shadow-xl py-4 px-6 flex flex-col gap-4 z-20"
 						>
 							{navList.map((link, index) => (
 								<li
@@ -68,11 +68,7 @@ const MobileNav = ({ navList, socialList, active, onClick, ThemeToggle }) => {
 									}}
 								>
 									<a
-										href={
-											link === "Blog" ? `${BLOG_URL}` : `#${link.toLowerCase()}`
-										}
-										target={link === "Blog" ? "_blank" : undefined}
-										rel={link === "Blog" ? "noopener noreferrer" : undefined}
+										href={`#${link.toLowerCase()}`}
 										className={`${
 											active === index ? "text-accent" : "text-primary"
 										} hover:text-accent/70 cursor-pointer capitalize`}
@@ -81,6 +77,18 @@ const MobileNav = ({ navList, socialList, active, onClick, ThemeToggle }) => {
 									</a>
 								</li>
 							))}
+							<hr className="border-accent/20" />
+							<li onClick={() => toggleMenu()}>
+								<a
+									href={BLOG_URL}
+									target="_blank"
+									rel="noopener noreferrer"
+									className="flex items-center justify-between text-accent hover:text-accent/70 cursor-pointer capitalize transition-colors"
+								>
+									Blog
+									<FiExternalLink className="text-xs" />
+								</a>
+							</li>
 						</motion.ul>
 					)}
 				</AnimatePresence>
