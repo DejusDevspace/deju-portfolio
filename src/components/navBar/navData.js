@@ -9,7 +9,6 @@ export const navList = [
 	"About",
 	"Experience",
 	"Projects",
-	"Blog",
 	"Contact",
 ];
 export const socialLinks = [
