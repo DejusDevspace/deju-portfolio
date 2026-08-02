@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import type { ReactNode } from "react";
 import { Analytics } from "@vercel/analytics/react";
 import { ThemeProvider } from "@/context/theme-provider";
+import Providers from "@/lib/providers";
 import Toaster from "@/components/layout/toaster";
 import "react-toastify/dist/ReactToastify.css";
 import "./globals.css";
@@ -17,9 +18,11 @@ export default function RootLayout({ children }: { children: ReactNode }) {
 		<html lang="en" suppressHydrationWarning>
 			<body>
 				<ThemeProvider>
-					{children}
-					<Toaster />
-					<Analytics />
+					<Providers>
+						{children}
+						<Toaster />
+						<Analytics />
+					</Providers>
 				</ThemeProvider>
 			</body>
 		</html>
