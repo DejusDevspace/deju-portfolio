@@ -17,11 +17,223 @@
   --color-primary: white;
   --color-secondary: #010b25;
   --color-background: #010b20;
-  --color-accent: #00ffff;
   --color-neonBlue: #00ffff;
+}
 
-  /* Neon Shadow for glow effects */
-  --shadow-neon: 0 0 5px #00ffff, 0 0 15px #00ffff, 0 0 15px #00ffff;
+/* ============================================================================
+  d3jusdevspace — Blog Design Tokens (Tailwind v4 @theme inline)
+  Style guide v1.0 — Dark mode default, light mode via [data-theme="light"]
+  ============================================================================ */
+
+@theme inline {
+	/* ── Font Families ── */
+	--font-body: "Space Grotesk", sans-serif;
+	--font-mono: "JetBrains Mono", monospace;
+	--font-display: "Montserrat", sans-serif;
+
+	/* ── Colors ── */
+	--color-bg-page: var(--color-bg-page);
+	--color-bg-surface: var(--color-bg-surface);
+	--color-bg-elevated: var(--color-bg-elevated);
+	--color-bg-subtle: var(--color-bg-subtle);
+
+	--color-text-primary: var(--color-text-primary);
+	--color-text-secondary: var(--color-text-secondary);
+	--color-text-tertiary: var(--color-text-tertiary);
+	--color-text-inverse: var(--color-text-inverse);
+
+	--color-accent: var(--color-accent);
+	--color-accent-hover: var(--color-accent-hover);
+	--color-accent-muted: var(--color-accent-muted);
+	--color-accent-border: var(--color-accent-border);
+
+	--color-border-subtle: var(--color-border-subtle);
+	--color-border-default: var(--color-border-default);
+	--color-border-strong: var(--color-border-strong);
+
+	--color-success: var(--color-success);
+	--color-success-muted: var(--color-success-muted);
+	--color-warning: var(--color-warning);
+	--color-warning-muted: var(--color-warning-muted);
+	--color-danger: var(--color-danger);
+	--color-danger-muted: var(--color-danger-muted);
+	--color-info: var(--color-info);
+	--color-info-muted: var(--color-info-muted);
+
+	--color-agent-badge: var(--color-agent-badge);
+
+	/* ── Spacing (extends Tailwind's default scale) ── */
+	--spacing-18: 4.5rem; /* 72px */
+	--spacing-22: 5.5rem; /* 88px */
+
+	/* ── Type Scale ── */
+	--text-display: 2.5rem;
+	--text-h1: 2rem;
+	--text-h2: 1.5rem;
+	--text-h3: 1.25rem;
+	--text-h4: 1.125rem;
+	--text-body-lg: 1.125rem;
+	--text-body: 1rem;
+	--text-body-sm: 0.9375rem;
+	--text-caption: 0.875rem;
+
+	/* ── Border Radius ── */
+	--radius-sm: 4px;
+	--radius-md: 8px;
+	--radius-lg: 12px;
+	--radius-xl: 16px;
+	--radius-full: 9999px;
+
+	/* ── Shadows ── */
+	--shadow-sm: var(--shadow-sm);
+	--shadow-md: var(--shadow-md);
+	--shadow-lg: var(--shadow-lg);
+	--shadow-neon: var(--shadow-neon-accent);
+}
+
+/* ============================================================================
+  Blog CSS Custom Properties — the canonical source for blog tokens
+  Dark mode = default :root | Light mode = [data-theme="light"]
+  ============================================================================ */
+
+:root {
+	/* ── Backgrounds ── */
+	--color-bg-page: #010b20;
+	--color-bg-surface: #0a1628;
+	--color-bg-elevated: #0f1e35;
+	--color-bg-subtle: #162440;
+
+	/* ── Text ── */
+	--color-text-primary: #e8eaf0;
+	--color-text-secondary: #9aa3b4;
+	--color-text-tertiary: #5a6478;
+	--color-text-inverse: #010b20;
+
+	/* ── Accent ── */
+	--color-accent: #00e5ff;
+	--color-accent-hover: #33eeff;
+	--color-accent-muted: #00e5ff1a;
+	--color-accent-border: #00e5ff33;
+
+	/* ── Borders ── */
+	--color-border-subtle: #1e2f4a;
+	--color-border-default: #2a3f5f;
+	--color-border-strong: #3a5070;
+
+	/* ── Semantic ── */
+	--color-success: #1d9e75;
+	--color-success-muted: #1d9e7520;
+	--color-warning: #ba7517;
+	--color-warning-muted: #ba751720;
+	--color-danger: #e24b4a;
+	--color-danger-muted: #e24b4a20;
+	--color-info: #378add;
+	--color-info-muted: #378add20;
+
+	/* ── Special ── */
+	--color-agent-badge: #00e5ff;
+	--shadow-neon-accent: 0 0 6px #00e5ff, 0 0 18px #00e5ff40;
+
+	/* ── Type Scale ── */
+	--text-display: 2.5rem;
+	--text-h1: 2rem;
+	--text-h2: 1.5rem;
+	--text-h3: 1.25rem;
+	--text-h4: 1.125rem;
+	--text-body-lg: 1.125rem;
+	--text-body: 1rem;
+	--text-body-sm: 0.9375rem;
+	--text-caption: 0.875rem;
+	--text-xs: 0.75rem;
+
+	/* ── Line Heights ── */
+	--leading-tight: 1.25;
+	--leading-snug: 1.4;
+	--leading-normal: 1.6;
+	--leading-relaxed: 1.8;
+
+	/* ── Font Weights ── */
+	--weight-regular: 400;
+	--weight-medium: 500;
+	--weight-semibold: 600;
+	--weight-bold: 700;
+
+	/* ── Spacing ── */
+	--space-1: 4px;
+	--space-2: 8px;
+	--space-3: 12px;
+	--space-4: 16px;
+	--space-5: 20px;
+	--space-6: 24px;
+	--space-8: 32px;
+	--space-10: 40px;
+	--space-12: 48px;
+	--space-16: 64px;
+	--space-20: 80px;
+	--space-24: 96px;
+
+	/* ── Shadows ── */
+	--shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.4);
+	--shadow-md: 0 4px 12px rgba(0, 0, 0, 0.5);
+	--shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.6);
+
+	/* ── Iconography ── */
+	--icon-sm: 16px;
+	--icon-md: 20px;
+	--icon-lg: 24px;
+
+	/* ── Animation ── */
+	--transition-fast: 100ms ease;
+	--transition-base: 150ms ease;
+	--transition-slow: 250ms ease;
+	--transition-layout: 300ms ease;
+
+	/* ── Layout ── */
+	--nav-height: 64px;
+	--admin-sidebar: 240px;
+	--admin-topbar: 56px;
+	--content-max: 1200px;
+	--reading-max: 720px;
+	--toc-width: 260px;
+	--admin-max: 1400px;
+}
+
+/* ── Blog Light Mode Overrides ── */
+[data-theme="light"] {
+	--color-bg-page: #f0f2f5;
+	--color-bg-surface: #ffffff;
+	--color-bg-elevated: #f7f8fa;
+	--color-bg-subtle: #eef0f3;
+
+	--color-text-primary: #0d1117;
+	--color-text-secondary: #4a5568;
+	--color-text-tertiary: #9aa3b2;
+	--color-text-inverse: #ffffff;
+
+	--color-accent: #0066ff;
+	--color-accent-hover: #0052cc;
+	--color-accent-muted: #0066ff12;
+	--color-accent-border: #0066ff30;
+
+	--color-border-subtle: #e2e6ed;
+	--color-border-default: #cdd2db;
+	--color-border-strong: #a0aab8;
+
+	--color-success: #0f6e56;
+	--color-success-muted: #0f6e5615;
+	--color-warning: #854f0b;
+	--color-warning-muted: #854f0b15;
+	--color-danger: #a32d2d;
+	--color-danger-muted: #a32d2d15;
+	--color-info: #185fa5;
+	--color-info-muted: #185fa515;
+
+	--color-agent-badge: #0066ff;
+	--shadow-neon-accent: 0 0 6px #0066ff40, 0 0 18px #0066ff20;
+
+	--shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.08);
+	--shadow-md: 0 4px 12px rgba(0, 0, 0, 0.12);
+	--shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.16);
 }
 
 @layer base {
@@ -45,6 +257,295 @@
     --color-neonBlue: #0077ff;
     --shadow-neon: 0 0 5px #0077ff, 0 0 15px #0077ff, 0 0 15px #0077ff;
   }
+}
+
+/* ============================================================================
+  Blog Base Styles
+  Blog pages apply these tokens via layout wrapper classes (bg-bg-page,
+  text-text-primary, font-body) so the portfolio's global body (JetBrains Mono,
+  --color-background) stays untouched outside of /blog routes.
+  ============================================================================ */
+
+::selection {
+	background: var(--color-accent-muted);
+	color: var(--color-accent);
+}
+
+/* ============================================================================
+  Blog Component Token Classes
+  ============================================================================ */
+
+/* ── Buttons ── */
+
+.btn-primary {
+	@apply inline-flex items-center gap-2 rounded-md font-mono text-sm font-medium;
+	background: var(--color-accent-muted);
+	color: var(--color-accent);
+	border: 1px solid var(--color-accent-border);
+	padding: var(--space-2) var(--space-4);
+	transition:
+		background var(--transition-base),
+		border-color var(--transition-base);
+}
+.btn-primary:hover {
+	background: var(--color-accent-border);
+	border-color: var(--color-accent);
+}
+
+.btn-danger {
+	@apply inline-flex items-center gap-2 rounded-md font-mono text-sm font-medium;
+	background: var(--color-danger-muted);
+	color: var(--color-danger);
+	border: 1px solid var(--color-danger-muted);
+	padding: var(--space-2) var(--space-4);
+	transition:
+		background var(--transition-base),
+		border-color var(--transition-base);
+}
+.btn-danger:hover {
+	border-color: var(--color-danger);
+}
+
+.btn-ghost {
+	@apply inline-flex items-center gap-2 rounded-md font-mono text-sm font-medium;
+	background: transparent;
+	color: var(--color-text-secondary);
+	border: 1px solid var(--color-border-subtle);
+	padding: var(--space-2) var(--space-4);
+	transition:
+		background var(--transition-base),
+		color var(--transition-base);
+}
+.btn-ghost:hover {
+	background: var(--color-bg-elevated);
+	color: var(--color-text-primary);
+}
+
+/* ── Cards ── */
+
+.card {
+	@apply rounded-lg;
+	background: var(--color-bg-surface);
+	border: 1px solid var(--color-border-subtle);
+	padding: var(--space-6);
+	transition: border-color var(--transition-base);
+}
+.card:hover {
+	border-color: var(--color-border-default);
+}
+
+/* ── Form Inputs ── */
+
+.input {
+	@apply w-full rounded-md font-body text-base;
+	background: var(--color-bg-subtle);
+	border: 1px solid var(--color-border-default);
+	color: var(--color-text-primary);
+	padding: var(--space-2) var(--space-3);
+	transition: border-color var(--transition-base);
+}
+.input:focus {
+	border-color: var(--color-accent);
+	outline: none;
+	box-shadow: 0 0 0 3px var(--color-accent-muted);
+}
+.input::placeholder {
+	color: var(--color-text-tertiary);
+}
+
+/* ── Tags & Badges ── */
+
+.tag {
+	@apply inline-flex items-center gap-1 rounded-full font-mono text-xs font-medium;
+	background: var(--color-accent-muted);
+	color: var(--color-accent);
+	border: 1px solid var(--color-accent-border);
+	padding: var(--space-1) var(--space-3);
+}
+
+.badge-agent {
+	@apply inline-flex items-center gap-1 rounded-full font-mono text-xs font-medium;
+	background: var(--color-warning-muted);
+	color: var(--color-warning);
+	border: 1px solid var(--color-warning);
+	padding: var(--space-1) var(--space-3);
+}
+
+.badge-published {
+	background: var(--color-success-muted);
+	color: var(--color-success);
+}
+.badge-draft {
+	background: var(--color-bg-subtle);
+	color: var(--color-text-secondary);
+}
+.badge-agent-draft {
+	background: var(--color-accent-muted);
+	color: var(--color-accent);
+}
+.badge-archived {
+	background: var(--color-warning-muted);
+	color: var(--color-warning);
+}
+
+/* ============================================================================
+  Prose / Markdown Body
+  ============================================================================ */
+
+.prose {
+	font-family: var(--font-body);
+	font-size: var(--text-body-lg);
+	line-height: var(--leading-relaxed);
+	color: var(--color-text-primary);
+}
+
+.prose h1,
+.prose h2,
+.prose h3 {
+	font-family: var(--font-display);
+	font-weight: var(--weight-bold);
+	color: var(--color-text-primary);
+	line-height: var(--leading-tight);
+}
+
+.prose h2 {
+	font-size: var(--text-h2);
+	margin: var(--space-10) 0 var(--space-4);
+}
+.prose h3 {
+	font-size: var(--text-h3);
+	margin: var(--space-8) 0 var(--space-3);
+}
+
+.prose p {
+	margin: 0 0 var(--space-5);
+}
+.prose a {
+	color: var(--color-accent);
+	text-decoration: underline;
+	text-underline-offset: 3px;
+}
+.prose a:hover {
+	color: var(--color-accent-hover);
+}
+
+.prose code {
+	font-family: var(--font-mono);
+	font-size: 0.875em;
+	background: var(--color-bg-subtle);
+	padding: 2px 6px;
+	border-radius: var(--radius-sm);
+}
+
+.prose pre {
+	background: var(--color-bg-subtle);
+	border: 1px solid var(--color-border-subtle);
+	border-radius: var(--radius-md);
+	padding: var(--space-5);
+	overflow-x: auto;
+	font-family: var(--font-mono);
+	font-size: var(--text-caption);
+	line-height: 1.7;
+}
+
+.prose blockquote {
+	border-left: 3px solid var(--color-accent);
+	padding-left: var(--space-5);
+	margin: var(--space-6) 0;
+	color: var(--color-text-secondary);
+	font-style: italic;
+}
+
+.prose hr {
+	border: none;
+	border-top: 1px solid var(--color-border-subtle);
+	margin: var(--space-10) 0;
+}
+
+.prose ul,
+.prose ol {
+	padding-left: var(--space-6);
+	margin: 0 0 var(--space-5);
+	list-style-position: outside;
+}
+
+.prose ul {
+	list-style-type: disc;
+}
+
+.prose ol {
+	list-style-type: decimal;
+}
+
+.prose li {
+	margin-bottom: var(--space-2);
+	padding-left: var(--space-1);
+}
+
+.prose li::marker {
+	color: var(--color-accent);
+}
+
+.prose li > ul,
+.prose li > ol {
+	margin-top: var(--space-2);
+	margin-bottom: 0;
+}
+
+.prose li > p {
+	margin-bottom: var(--space-2);
+}
+
+.prose li > ul {
+	list-style-type: circle;
+}
+
+.prose li > ol {
+	list-style-type: lower-alpha;
+}
+
+.prose table {
+	width: 100%;
+	border-collapse: collapse;
+	font-size: var(--text-body-sm);
+}
+
+.prose th {
+	font-family: var(--font-mono);
+	font-size: var(--text-xs);
+	font-weight: var(--weight-semibold);
+	text-transform: uppercase;
+	letter-spacing: 0.06em;
+	color: var(--color-text-secondary);
+	border-bottom: 1px solid var(--color-border-default);
+	padding: var(--space-2) var(--space-3);
+	text-align: left;
+}
+
+.prose td {
+	border-bottom: 1px solid var(--color-border-subtle);
+	padding: var(--space-3);
+	vertical-align: top;
+}
+
+.prose img {
+	max-width: 100%;
+	max-height: 600px;
+	width: 100%;
+	height: auto;
+	object-fit: contain;
+	border-radius: var(--radius-md);
+	border: 1px solid var(--color-border-subtle);
+	margin: var(--space-6) 0;
+}
+
+/* ── BlockNote Editor — image constraints ── */
+
+.blocknote-wrapper img {
+	max-width: 100%;
+	max-height: 600px;
+	object-fit: contain;
+	border-radius: var(--radius-md);
 }
 
 @layer utilities {
@@ -83,4 +584,119 @@
   .animate-blink {
     animation: blink 1s step-start infinite;
   }
+}
+
+@layer utilities {
+	.no-scrollbar::-webkit-scrollbar,
+	.hide-scrollbar::-webkit-scrollbar {
+		display: none;
+	}
+	.no-scrollbar,
+	.hide-scrollbar {
+		-ms-overflow-style: none; /* IE and Edge */
+		scrollbar-width: none; /* Firefox */
+	}
+}
+
+/* ============================================================================
+  Blog Animations & Keyframes
+  ============================================================================ */
+
+@keyframes skeleton-pulse {
+	0%,
+	100% {
+		opacity: 0.4;
+	}
+	50% {
+		opacity: 0.8;
+	}
+}
+
+@keyframes fade-in {
+	from {
+		opacity: 0;
+		transform: translateY(8px);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+@keyframes spinner-orbit {
+	0% {
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(360deg);
+	}
+}
+
+@keyframes glitch-shift {
+	0%,
+	100% {
+		transform: translate(0);
+	}
+	20% {
+		transform: translate(-2px, 2px);
+	}
+	40% {
+		transform: translate(2px, -2px);
+	}
+	60% {
+		transform: translate(-1px, -1px);
+	}
+	80% {
+		transform: translate(1px, 1px);
+	}
+}
+
+@keyframes glitch-clip {
+	0% {
+		clip-path: inset(40% 0 61% 0);
+	}
+	20% {
+		clip-path: inset(92% 0 1% 0);
+	}
+	40% {
+		clip-path: inset(43% 0 1% 0);
+	}
+	60% {
+		clip-path: inset(25% 0 58% 0);
+	}
+	80% {
+		clip-path: inset(54% 0 7% 0);
+	}
+	100% {
+		clip-path: inset(58% 0 43% 0);
+	}
+}
+
+@keyframes terminal-blink {
+	0%,
+	100% {
+		opacity: 1;
+	}
+	50% {
+		opacity: 0;
+	}
+}
+
+.skeleton {
+	background: var(--color-bg-subtle);
+	border-radius: var(--radius-md);
+	animation: skeleton-pulse 1.5s ease-in-out infinite;
+}
+
+/* ============================================================================
+  Blog Accessibility — Reduced Motion
+  ============================================================================ */
+
+@media (prefers-reduced-motion: reduce) {
+	*,
+	*::before,
+	*::after {
+		animation-duration: 0.01ms !important;
+		transition-duration: 0.01ms !important;
+	}
 }
