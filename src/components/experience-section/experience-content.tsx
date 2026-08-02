@@ -1,0 +1,50 @@
+"use client";
+
+import { motion } from "framer-motion";
+import { experience } from "@/data/experience";
+
+export default function ExperienceContent() {
+	return (
+		<motion.div
+			initial={{ opacity: 0, y: 50 }}
+			whileInView={{ opacity: 1, y: 0 }}
+			transition={{ duration: 1 }}
+			viewport={{ once: true }}
+			className="flex flex-col gap-8 text-center justify-center items-center"
+		>
+			{/* Experience Cards */}
+			<div className="flex flex-col xl:flex-row flex-wrap gap-6 text-start">
+				{experience.map((item, index) => (
+					<motion.div
+						key={index}
+						initial={{ opacity: 0, scale: 0.95 }}
+						whileInView={{ opacity: 1, scale: 1 }}
+						transition={{ duration: 0.6, delay: index * 0.2 }}
+						viewport={{ once: true }}
+						className="relative bg-secondary p-6 rounded-3xl shadow-md hover:shadow-accent transition-shadow duration-300 xl:max-w-[32%]"
+					>
+						<p className="text-accent text-sm mb-2">{item.period}</p>
+						<h3 className="text-xl font-semibold text-primary mb-2">
+							{item.role}
+						</h3>
+						<p className="text-primary/80 text-sm mb-4">{item.description}</p>
+
+						<div className="flex justify-start mt-6">
+							<div className="flex items-center gap-2 text-primary font-medium">
+								<span className="text-accent text-xl">●</span>
+								{item.company}
+								<span className="text-sm xl:hidden bg-accent/70 text-transparent bg-clip-text">
+									| {item.locationType}
+								</span>
+							</div>
+						</div>
+
+						<div className="absolute bottom-3 hidden xl:block left-1/2 -translate-x-1/2 xl:left-auto xl:right-3 xl:translate-x-0 px-2 py-1 text-xs font-medium rounded-full border border-accent text-accent bg-secondary shadow-sm transition-all duration-300 group-hover:scale-105">
+							{item.locationType}
+						</div>
+					</motion.div>
+				))}
+			</div>
+		</motion.div>
+	);
+}

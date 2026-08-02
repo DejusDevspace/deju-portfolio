@@ -1,0 +1,86 @@
+@import url("https://fonts.googleapis.com/css2?family=Emblema+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap");
+@import "tailwindcss";
+
+@theme {
+  /* Fonts */
+  --font-primary: "JetBrains Mono", monospace;
+  --font-serif: "Montserrat", sans-serif;
+  --font-embela-cursive: "Emblema One", cursive;
+  --font-roboto: "Roboto", sans-serif;
+  --font-special: "Space Grotesk", sans-serif;
+
+  /* Colors */
+  --color-primary: white;
+  --color-secondary: #010b25;
+  --color-background: #010b20;
+  --color-accent: #00ffff;
+  --color-neonBlue: #00ffff;
+
+  /* Neon Shadow for glow effects */
+  --shadow-neon: 0 0 5px #00ffff, 0 0 15px #00ffff, 0 0 15px #00ffff;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    margin: 0;
+    padding: 0;
+    color: var(--color-primary);
+    font-family: var(--font-primary);
+    background-color: var(--color-background);
+  }
+
+  :root[data-theme="light"] {
+    --color-primary: #000000;
+    --color-secondary: #f4ecec;
+    --color-background: #e2dcdc;
+    --color-accent: #0077ff;
+    --color-neonBlue: #0077ff;
+    --shadow-neon: 0 0 5px #0077ff, 0 0 15px #0077ff, 0 0 15px #0077ff;
+  }
+}
+
+@layer utilities {
+  @keyframes marquee {
+    0% {
+      transform: translateX(0%);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+
+  @keyframes inverse-marquee {
+    0% {
+      transform: translateX(-50%);
+    }
+    100% {
+      transform: translateX(0%);
+    }
+  }
+
+  @keyframes blink {
+    50% {
+      opacity: 0;
+    }
+  }
+
+  .animate-marquee {
+    animation: marquee 25s linear infinite;
+  }
+
+  .animate-inverse-marquee {
+    animation: inverse-marquee 25s linear infinite;
+  }
+
+  .animate-blink {
+    animation: blink 1s step-start infinite;
+  }
+}
