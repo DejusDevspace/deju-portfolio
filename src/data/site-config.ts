@@ -3,7 +3,7 @@ export const siteConfig = {
   fullName: "Ojomideju Adejo",
   email: "ojomideju2003@gmail.com",
   siteUrl: "https://dejuadejo.vercel.app/",
-  blogUrl: "https://dejusdevspace.vercel.app",
+  blogUrl: "/blog",
   resumePath: "/Ojomideju_Adejo_Resume.pdf",
   social: {
     linkedin: "https://www.linkedin.com/in/deju-adejo/",

@@ -5,7 +5,7 @@ import { MdOutgoingMail } from "react-icons/md";
 import { siteConfig } from "./site-config";
 import type { SocialLink } from "@/types";
 
-export const BLOG_URL = siteConfig.blogUrl;
+export const BLOG_URL = "/blog";
 
 export const navList: string[] = [
 	"Home",
