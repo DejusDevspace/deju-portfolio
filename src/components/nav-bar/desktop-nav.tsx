@@ -2,8 +2,8 @@
 
 import { motion } from "framer-motion";
 import SocialIcon from "../common/social-icon";
+import Link from "next/link";
 import { BLOG_URL } from "@/data/nav-data";
-import { FiExternalLink } from "react-icons/fi";
 import type { ReactNode } from "react";
 import type { SocialLink } from "@/types";
 
@@ -45,15 +45,12 @@ export default function DesktopNav({
 					</li>
 				))}
 				<div className="flex items-center gap-4 ml-2">
-					<a
+					<Link
 						href={BLOG_URL}
-						target="_blank"
-						rel="noopener noreferrer"
 						className="border border-accent/50 text-accent px-4 py-1.5 rounded-md flex items-center gap-2 text-sm font-medium hover:bg-accent/10 transition-colors duration-300"
 					>
 						Blog
-						<FiExternalLink className="text-xs" />
-					</a>
+					</Link>
 					{socialList.map((social, index) => (
 						<SocialIcon key={index} icon={social.icon} link={social.link} />
 					))}

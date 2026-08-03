@@ -4,8 +4,8 @@ import { useState, useRef, useEffect } from "react";
 import { CiMenuFries } from "react-icons/ci";
 import { motion, AnimatePresence } from "framer-motion";
 import SocialIcon from "../common/social-icon";
+import Link from "next/link";
 import { BLOG_URL } from "@/data/nav-data";
-import { FiExternalLink } from "react-icons/fi";
 import type { ReactNode } from "react";
 import type { SocialLink } from "@/types";
 
@@ -97,15 +97,12 @@ export default function MobileNav({
 							))}
 							<hr className="border-accent/20" />
 							<li onClick={() => toggleMenu()}>
-								<a
+								<Link
 									href={BLOG_URL}
-									target="_blank"
-									rel="noopener noreferrer"
 									className="flex items-center justify-between text-accent hover:text-accent/70 cursor-pointer capitalize transition-colors"
 								>
 									Blog
-									<FiExternalLink className="text-xs" />
-								</a>
+								</Link>
 							</li>
 						</motion.ul>
 					)}
