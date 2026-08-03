@@ -2,6 +2,8 @@
 
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
+import Link from "next/link";
+import { FiBookOpen } from "react-icons/fi";
 import DownloadCVButton from "../common/download-cv-button";
 import LottieAnimation from "./lottie-animation";
 
@@ -53,7 +55,16 @@ export default function HeroMain() {
 					animate={{ opacity: 1 }}
 					transition={{ delay: 0.5, duration: 1, ease: "easeInOut" }}
 				>
-					<DownloadCVButton />
+					<DownloadCVButton>
+						<Link
+							href="/blog"
+							className="flex items-center gap-2 border border-accent/50 text-accent px-6 py-3 rounded-lg cursor-pointer
+								hover:bg-accent/10 hover:scale-105 transition-all duration-300"
+						>
+							<span>Read My Blog</span>
+							<FiBookOpen className="text-xl" />
+						</Link>
+					</DownloadCVButton>
 				</motion.div>
 			</motion.div>
 		</div>
